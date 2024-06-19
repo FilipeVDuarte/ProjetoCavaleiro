@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3n47ao0roi2d"]
+
+[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="1_8v4gk"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="2_4hfgh"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="2_mucma"]
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://misc/pumpkin.tscn" id="4_xftxu"]
+[ext_resource type="PackedScene" uid="uid://dpkamruysihbf" path="res://misc/special_pumpkin.tscn" id="5_3gxwh"]
+[ext_resource type="PackedScene" uid="uid://pomg25lf0eic" path="res://misc/golden_meat.tscn" id="6_6qhtg"]
+[ext_resource type="PackedScene" uid="uid://dfvnb2rgv81na" path="res://misc/real.tscn" id="7_ulevs"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Indicador UI" parent="." instance=ExtResource("1_8v4gk")]
+position = Vector2(1544, 276)
+scale = Vector2(0.955321, 0.955321)
+
+[node name="Player" parent="." instance=ExtResource("2_mucma")]
+position = Vector2(507, 266)
+scale = Vector2(2.78413, 2.78413)
+health = 50
+
+[node name="Meat" parent="." instance=ExtResource("2_4hfgh")]
+position = Vector2(995, 194)
+
+[node name="Pumpkin" parent="." instance=ExtResource("4_xftxu")]
+position = Vector2(154, 163)
+
+[node name="Pumpkin2" parent="." instance=ExtResource("5_3gxwh")]
+position = Vector2(165, 568)
+
+[node name="Meat2" parent="." instance=ExtResource("6_6qhtg")]
+position = Vector2(1018, 595)
+
+[node name="Real" parent="." instance=ExtResource("7_ulevs")]
+position = Vector2(473, 495)
+
+[node name="Real2" parent="." instance=ExtResource("7_ulevs")]
+position = Vector2(643, 493)

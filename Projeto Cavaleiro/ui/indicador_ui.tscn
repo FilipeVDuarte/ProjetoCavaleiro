@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnel06jh8ahlu"]
+
+[ext_resource type="Texture2D" uid="uid://ct1g1ptmjan8g" path="res://ui/textures/Arrow.png" id="1_dftjt"]
+[ext_resource type="Script" path="res://scripts/indicador_ui.gd" id="1_tqw6k"]
+
+[node name="Indicador UI" type="Node2D"]
+script = ExtResource("1_tqw6k")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_dftjt")
+offset = Vector2(-22, 0)

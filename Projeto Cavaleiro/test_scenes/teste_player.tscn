@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bly3fjnhyjpvj"]
+
+[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="1_0e7xo"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="2_c6s0v"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Indicador UI" parent="." instance=ExtResource("1_0e7xo")]
+position = Vector2(-235, 1269)
+scale = Vector2(0.955321, 0.955321)
+
+[node name="Player" parent="." instance=ExtResource("2_c6s0v")]
+position = Vector2(514, 257)
+scale = Vector2(2.78413, 2.78413)

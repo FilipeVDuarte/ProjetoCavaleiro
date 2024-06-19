@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://hrinb0hnk5fy"]
+
+[ext_resource type="Texture2D" uid="uid://du8q755lnqa1p" path="res://ui/textures/Quest_Icon.png" id="1_ubuxj"]
+[ext_resource type="Script" path="res://ui/mark_objetive.gd" id="2_oi0kw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ir647"]
+radius = 42.0119
+
+[node name="Mark" type="Sprite2D"]
+texture = ExtResource("1_ubuxj")
+offset = Vector2(0, -30)
+script = ExtResource("2_oi0kw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -17)
+shape = SubResource("CircleShape2D_ir647")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3n47ao0roi2d"]
+
+[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://enemies/indicador_ui.tscn" id="1_8v4gk"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="2_4hfgh"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="2_mucma"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_mucma")]
+position = Vector2(514, 257)
+scale = Vector2(2.78413, 2.78413)
+
+[node name="Meat" parent="." instance=ExtResource("2_4hfgh")]
+position = Vector2(891, 275)
+
+[node name="Indicador UI" parent="Meat" instance=ExtResource("1_8v4gk")]
+position = Vector2(1, -17)
+scale = Vector2(0.955321, 0.955321)

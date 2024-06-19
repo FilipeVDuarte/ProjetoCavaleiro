@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3 uid="uid://clrd6brgp0grc"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_oobsk"]
+[ext_resource type="PackedScene" uid="uid://cjstm6kgk56mb" path="res://misc/skull.tscn" id="2_r2pl2"]
+[ext_resource type="Texture2D" uid="uid://b8gcfrsee2xvo" path="res://enemies/textures/CorpoSeco_v2.png" id="3_8yolh"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="3_om3v1"]
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_c6dhm"]
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://misc/pumpkin.tscn" id="4_e8e8u"]
+[ext_resource type="PackedScene" uid="uid://pomg25lf0eic" path="res://misc/golden_meat.tscn" id="5_o882u"]
+[ext_resource type="PackedScene" uid="uid://dpkamruysihbf" path="res://misc/special_pumpkin.tscn" id="6_l0a66"]
+[ext_resource type="PackedScene" uid="uid://dfvnb2rgv81na" path="res://misc/real.tscn" id="7_ek5ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
+size = Vector2(26, 35)
+
+[node name="CorpoSeco" type="CharacterBody2D" groups=["enemies"]]
+motion_mode = 1
+script = ExtResource("1_oobsk")
+death_prefab = ExtResource("2_r2pl2")
+drop_itens = Array[PackedScene]([ExtResource("3_om3v1"), ExtResource("4_e8e8u"), ExtResource("5_o882u"), ExtResource("6_l0a66"), ExtResource("7_ek5ib")])
+drop_chances = Array[float]([0.8, 0.8, 0.1, 0.1, 1.9])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("3_8yolh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-2, -17.5)
+shape = SubResource("RectangleShape2D_n66ak")
+
+[node name="FollowPlayer" type="Node" parent="."]
+script = ExtResource("4_c6dhm")
+speed = 0.7
+
+[node name="DamageDigitMarker" type="Marker2D" parent="."]
+position = Vector2(0, -41)

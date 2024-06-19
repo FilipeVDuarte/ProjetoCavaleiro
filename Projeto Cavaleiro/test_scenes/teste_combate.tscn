@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://u80klxk3x68x"]
+
+[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="1_t1w8g"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="2_mpg04"]
+[ext_resource type="PackedScene" uid="uid://mqm43f68ov35" path="res://enemies/scenes/dragao_latao.tscn" id="3_5ujlt"]
+[ext_resource type="PackedScene" uid="uid://yerww5qdawwl" path="res://enemies/scenes/boitata.tscn" id="4_jm1ua"]
+[ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="5_m2cpu"]
+[ext_resource type="PackedScene" uid="uid://dfc5gm7ate1qt" path="res://enemies/scenes/corposeco_v1.tscn" id="6_23f6t"]
+[ext_resource type="PackedScene" uid="uid://clrd6brgp0grc" path="res://enemies/scenes/corposeco_v2.tscn" id="7_3exrp"]
+[ext_resource type="PackedScene" uid="uid://je6yh8ilaktd" path="res://enemies/scenes/corposeco_v3.tscn" id="8_eeabk"]
+[ext_resource type="PackedScene" uid="uid://bcufqdcsg87lc" path="res://enemies/scenes/cuca.tscn" id="9_lnnxc"]
+[ext_resource type="PackedScene" uid="uid://bok6nl77qmr2c" path="res://enemies/scenes/mula.tscn" id="10_3qvaq"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Indicador UI" parent="." instance=ExtResource("1_t1w8g")]
+position = Vector2(1166, -106)
+scale = Vector2(0.955321, 0.955321)
+
+[node name="Player" parent="." instance=ExtResource("2_mpg04")]
+position = Vector2(372, 266)
+
+[node name="DragaoLatão" parent="." instance=ExtResource("3_5ujlt")]
+position = Vector2(660, 300)
+scale = Vector2(2.5, 2.5)
+
+[node name="Boitata" parent="." instance=ExtResource("4_jm1ua")]
+position = Vector2(108, 223)
+
+[node name="Capiguara" parent="." instance=ExtResource("5_m2cpu")]
+position = Vector2(273, 147)
+
+[node name="CorpoSeco" parent="." instance=ExtResource("6_23f6t")]
+position = Vector2(278, 494)
+
+[node name="CorpoSeco2" parent="." instance=ExtResource("7_3exrp")]
+position = Vector2(226, 382)
+
+[node name="CorpoSeco3" parent="." instance=ExtResource("8_eeabk")]
+position = Vector2(423, 461)
+
+[node name="Cuca" parent="." instance=ExtResource("9_lnnxc")]
+position = Vector2(552, 467)
+
+[node name="Mula" parent="." instance=ExtResource("10_3qvaq")]
+position = Vector2(761, 434)

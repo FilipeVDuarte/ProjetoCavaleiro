@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpkamruysihbf"]
+
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://misc/pumpkin.tscn" id="1_rxpne"]
+[ext_resource type="Texture2D" uid="uid://d1f22r1swsou" path="res://addons/Kenny Particle Pack/magic_05.png" id="2_mmvb2"]
+
+[sub_resource type="Gradient" id="Gradient_qoray"]
+offsets = PackedFloat32Array(0.175732, 1)
+colors = PackedColorArray(0.333333, 0, 1, 1, 0.99, 0.1584, 0.9207, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_30t01"]
+gradient = SubResource("Gradient_qoray")
+
+[sub_resource type="Curve" id="Curve_55t4i"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.209738, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_y5du7"]
+curve = SubResource("Curve_55t4i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_834x3"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(25, 25, 1)
+angle_max = 372.2
+gravity = Vector3(0, -5, 0)
+scale_min = 0.0
+scale_max = 0.03
+color_ramp = SubResource("GradientTexture1D_30t01")
+emission_curve = SubResource("CurveTexture_y5du7")
+turbulence_noise_strength = 9.5
+turbulence_noise_scale = 10.0
+turbulence_noise_speed_random = 1.59
+turbulence_influence_min = 0.0
+turbulence_influence_max = 0.786
+
+[node name="Pumpkin" instance=ExtResource("1_rxpne")]
+self_modulate = Color(0.945072, 0.000947021, 0.976961, 1)
+regen_amount = 100
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." index="0"]
+position = Vector2(2, -27.3333)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_834x3")
+texture = ExtResource("2_mmvb2")

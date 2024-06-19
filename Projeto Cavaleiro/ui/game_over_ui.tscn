@@ -1,0 +1,844 @@
+[gd_scene load_steps=19 format=3 uid="uid://p0hrhueppdns"]
+
+[ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_7ds80"]
+[ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="1_jgrr6"]
+[ext_resource type="Texture2D" uid="uid://dr8ks3fchub7n" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_y2lav"]
+[ext_resource type="Texture2D" uid="uid://bmbm3sr2p71ut" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_dsgvb"]
+[ext_resource type="Texture2D" uid="uid://dbp5kq7bvenhn" path="res://addons/Tiny Swords/Resources/Resources/Real_(NoShadow).png" id="4_jdxfj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yofvj"]
+font = ExtResource("1_jgrr6")
+font_size = 45
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsw6k"]
+texture = ExtResource("2_y2lav")
+texture_margin_left = 64.0
+texture_margin_top = 8.0
+texture_margin_right = 64.0
+texture_margin_bottom = 24.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxqbg"]
+font = ExtResource("1_jgrr6")
+font_size = 80
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vmmpf"]
+load_path = "res://.godot/imported/Banner_Vertical.png-4fadd96639f7404cf154bfee3ad7c7ae.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fse5g"]
+texture = SubResource("CompressedTexture2D_vmmpf")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(32, 32, 128, 128)
+modulate_color = Color(0, 0.55, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8n0eq"]
+font = ExtResource("1_jgrr6")
+font_size = 40
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mov0f"]
+atlas = ExtResource("3_dsgvb")
+region = Rect2(40, 56, 56, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdf36"]
+atlas = ExtResource("4_jdxfj")
+region = Rect2(48, 64, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_riphb"]
+texture = SubResource("CompressedTexture2D_vmmpf")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(32, 32, 128, 128)
+modulate_color = Color(0.6, 0.0431373, 0.996078, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erle8"]
+texture = SubResource("CompressedTexture2D_vmmpf")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+region_rect = Rect2(32, 32, 128, 128)
+modulate_color = Color(0.0901288, 0.517427, 0.553172, 1)
+
+[sub_resource type="Animation" id="Animation_1vnoe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.584314)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Container/Bottom_Itens:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(298, 292)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container/Bottom_Tempo:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(298, 154)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Container/Bottom_Monstros:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(298, 194)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Container/Bottom_Tempo/Tempo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Container/Bottom_Monstros/Inimigos_Derrotados:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Voltando:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Voltando em...
+3"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Voltando:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(510, 313)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VariaGameOver:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Voltando:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Container/Bottom_Itens/GridContainer:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_snak4"]
+resource_name = "default"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.454715, 0.454715),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.780392)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Container/Bottom_Itens:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(298, 292)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container/Bottom_Tempo:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(298, 154)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Container/Bottom_Monstros:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(298, 0), Vector2(298, 194)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Container/Bottom_Itens/ItensColetados:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Container/Bottom_Tempo/Tempo:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Container/Bottom_Monstros/Inimigos_Derrotados:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Voltando:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Voltando em...
+3", "Voltando em...
+2", "Voltando em...
+1"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Voltando:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.9, 1.9),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [Vector2(510, 150), Vector2(510, 313)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VariaGameOver:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Voltando:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.9, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Container/Bottom_Itens/GridContainer:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.5, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2unp"]
+_data = {
+"RESET": SubResource("Animation_1vnoe"),
+"default": SubResource("Animation_snak4")
+}
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_7ds80")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.584314)
+
+[node name="Voltando" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -47.0
+offset_right = 130.0
+offset_bottom = 48.0001
+grow_horizontal = 2
+grow_vertical = 2
+text = "Voltando em...
+3"
+label_settings = SubResource("LabelSettings_yofvj")
+horizontal_alignment = 1
+
+[node name="VariaGameOver" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel_DeuPrati" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="DeuPrati" type="Label" parent="VariaGameOver/Panel_DeuPrati"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Deu pra ti"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_JaEra" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="JaEra" type="Label" parent="VariaGameOver/Panel_JaEra"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Já era"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_TchauBenca" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 306.0
+offset_top = 120.0
+offset_right = 934.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="TchauBenca" type="Label" parent="VariaGameOver/Panel_TchauBenca"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tchau e bença"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_BahSeFoi" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="BahSeFoi" type="Label" parent="VariaGameOver/Panel_BahSeFoi"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bah, se foi"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_Mane" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 329.0
+offset_top = 120.0
+offset_right = 911.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="Mane" type="Label" parent="VariaGameOver/Panel_Mane"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Perdeu, mané"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_FoiSaco" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="FoiSaco" type="Label" parent="VariaGameOver/Panel_FoiSaco"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Foi pro saco"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_DeuCarai" type="Panel" parent="VariaGameOver"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="DeuCarai" type="Label" parent="VariaGameOver/Panel_DeuCarai"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Deu o carai"
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Panel_Puts" type="Panel" parent="VariaGameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 896.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
+
+[node name="DeuCarai" type="Label" parent="VariaGameOver/Panel_Puts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 38.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Puts..."
+label_settings = SubResource("LabelSettings_xxqbg")
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bottom_Itens" type="Panel" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -543.0
+offset_top = -146.0
+offset_right = -245.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_fse5g")
+
+[node name="ItensColetados" type="Label" parent="Container/Bottom_Itens"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 16.0
+offset_right = 91.0
+offset_bottom = 99.0
+grow_horizontal = 2
+text = "Itens
+Coletados:"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Container/Bottom_Itens"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -8.0
+offset_right = 71.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 28
+columns = 2
+
+[node name="Comida" type="TextureRect" parent="Container/Bottom_Itens/GridContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mov0f")
+
+[node name="QT_Itens_Comidas" type="Label" parent="Container/Bottom_Itens/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="Moeda" type="TextureRect" parent="Container/Bottom_Itens/GridContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gdf36")
+
+[node name="QT_Itens_Moedas" type="Label" parent="Container/Bottom_Itens/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="Bottom_Tempo" type="Panel" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 279.0
+offset_top = -13.0
+offset_right = 577.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_riphb")
+
+[node name="Tempo" type="Label" parent="Container/Bottom_Tempo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_top = 20.0
+offset_right = 58.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "Tempo:"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="QT_Tempo" type="Label" parent="Container/Bottom_Tempo/Tempo"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 49.0
+offset_right = 57.5
+offset_bottom = 89.0
+grow_horizontal = 2
+text = "00:15"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="Bottom_Monstros" type="Panel" parent="Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 277.0
+offset_top = -227.0
+offset_right = 575.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_erle8")
+
+[node name="Inimigos_Derrotados" type="Label" parent="Container/Bottom_Monstros"]
+layout_mode = 2
+offset_left = 49.5
+offset_top = 25.0
+offset_right = 248.5
+offset_bottom = 108.0
+grow_horizontal = 2
+text = "inimigos
+derrotados:"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="QT_Inimigos" type="Label" parent="Container/Bottom_Monstros/Inimigos_Derrotados"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 78.0
+offset_top = 92.0
+offset_right = 121.0
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "15"
+label_settings = SubResource("LabelSettings_8n0eq")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b2unp")
+}
+autoplay = "default"

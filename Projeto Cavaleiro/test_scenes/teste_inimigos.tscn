@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvq5164bv2e1p"]
+
+[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="1_a24gq"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="1_rdglp"]
+[ext_resource type="PackedScene" uid="uid://bcufqdcsg87lc" path="res://enemies/scenes/cuca.tscn" id="3_y1bhu"]
+[ext_resource type="PackedScene" uid="uid://dfc5gm7ate1qt" path="res://enemies/scenes/corposeco_v1.tscn" id="4_70o6i"]
+[ext_resource type="PackedScene" uid="uid://bok6nl77qmr2c" path="res://enemies/scenes/mula.tscn" id="5_682b4"]
+[ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="6_t5sdh"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Indicador UI" parent="." instance=ExtResource("1_a24gq")]
+position = Vector2(-235, 1269)
+scale = Vector2(0.955321, 0.955321)
+
+[node name="Player" parent="." instance=ExtResource("1_rdglp")]
+position = Vector2(514, 257)
+scale = Vector2(2.78413, 2.78413)
+
+[node name="Cuca" parent="." instance=ExtResource("3_y1bhu")]
+position = Vector2(970, 346)
+scale = Vector2(3, 3)
+
+[node name="CorpoSeco" parent="." instance=ExtResource("4_70o6i")]
+position = Vector2(872, 547)
+scale = Vector2(2, 2)
+
+[node name="Mula" parent="." instance=ExtResource("5_682b4")]
+position = Vector2(470, 579)
+scale = Vector2(3, 3)
+
+[node name="Capiguara" parent="." instance=ExtResource("6_t5sdh")]
+position = Vector2(135, 321)
+scale = Vector2(4, 4)
