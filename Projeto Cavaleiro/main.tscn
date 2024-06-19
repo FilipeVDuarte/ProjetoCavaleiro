@@ -236,6 +236,7 @@ script = ExtResource("14_artqg")
 mob_spawner = NodePath("../MobSpawner")
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_o58rk")]
+process_mode = 4
 position = Vector2(5, 0)
 scale = Vector2(1.08891, 1.08891)
 

@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://co3fhu1h8tpuo"]
+[gd_scene load_steps=4 format=3 uid="uid://co3fhu1h8tpuo"]
 
-[ext_resource type="Texture2D" uid="uid://cbtv8hhewbgd0" path="res://addons/Tiny Swords/Resources/Trees/Tree.png" id="1_dyllf"]
+[ext_resource type="Texture2D" uid="uid://33i16lgrn5e4" path="res://world/Tree_Tronco.png" id="1_ca7vi"]
+[ext_resource type="Texture2D" uid="uid://4x4qpa2cc7iw" path="res://world/Tree_Copa.png" id="2_bgoic"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3kfp7"]
-radius = 14.0357
+[sub_resource type="CircleShape2D" id="CircleShape2D_qc6ca"]
+radius = 11.0454
 
 [node name="Arvore" type="StaticBody2D"]
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -77)
+texture = ExtResource("1_ca7vi")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -77)
-texture = ExtResource("1_dyllf")
-region_enabled = true
-region_rect = Rect2(192, 0, 192, 192)
+texture = ExtResource("2_bgoic")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("CircleShape2D_3kfp7")
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_qc6ca")
