@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://br7ahv7r5fn33"]
+[gd_scene load_steps=34 format=3 uid="uid://br7ahv7r5fn33"]
 
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="1_1wp24"]
 [ext_resource type="Script" path="res://main.gd" id="1_ug5al"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c7f6817byu55m" path="res://addons/Tiny Swords/Deco/02.png" id="3_mfc8d"]
 [ext_resource type="Texture2D" uid="uid://5xj31m6h4inj" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="3_ph2xp"]
 [ext_resource type="Texture2D" uid="uid://bkiuec6qu6dbf" path="res://addons/Tiny Swords/Deco/03.png" id="4_slgbr"]
-[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="5_3lmvq"]
 [ext_resource type="Texture2D" uid="uid://b6lyid3ehw5ah" path="res://addons/Tiny Swords/Deco/04.png" id="5_qbr4s"]
 [ext_resource type="Texture2D" uid="uid://41wnfcgyqukq" path="res://addons/Tiny Swords/Deco/05.png" id="6_2r7jp"]
 [ext_resource type="Texture2D" uid="uid://budh13bfanye8" path="res://addons/Tiny Swords/Deco/06.png" id="7_n0f82"]
@@ -17,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://yfle76qhcct5" path="res://addons/Tiny Swords/Deco/08.png" id="9_ubayw"]
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
-[ext_resource type="PackedScene" uid="uid://d11xmtbyxo7t6" path="res://misc/quest_icon.tscn" id="15_0gsxq"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://misc/arvore.tscn" id="17_x7dkj"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
 
@@ -195,38 +193,6 @@ remote_path = NodePath("../../MobSpawner")
 update_rotation = false
 update_scale = false
 
-[node name="QuestIcon" parent="." instance=ExtResource("15_0gsxq")]
-visible = false
-position = Vector2(129, -39)
-
-[node name="Indicador UI" parent="QuestIcon" instance=ExtResource("5_3lmvq")]
-position = Vector2(0.666626, 2.66669)
-scale = Vector2(0.666667, 0.666667)
-
-[node name="QuestIcon2" parent="." instance=ExtResource("15_0gsxq")]
-visible = false
-position = Vector2(-259, 299)
-
-[node name="Indicador UI" parent="QuestIcon2" instance=ExtResource("5_3lmvq")]
-position = Vector2(0.666626, 2.66669)
-scale = Vector2(0.666667, 0.666667)
-
-[node name="QuestIcon3" parent="." instance=ExtResource("15_0gsxq")]
-visible = false
-position = Vector2(-574, 42)
-
-[node name="Indicador UI" parent="QuestIcon3" instance=ExtResource("5_3lmvq")]
-position = Vector2(0.666626, 2.66669)
-scale = Vector2(0.666667, 0.666667)
-
-[node name="QuestIcon4" parent="." instance=ExtResource("15_0gsxq")]
-visible = false
-position = Vector2(-279, -313)
-
-[node name="Indicador UI" parent="QuestIcon4" instance=ExtResource("5_3lmvq")]
-position = Vector2(0.666626, 2.66669)
-scale = Vector2(0.666667, 0.666667)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(615, 331)
 scale = Vector2(2, 2)
@@ -274,9 +240,87 @@ position = Vector2(-890, 121)
 position = Vector2(-338, -770)
 
 [node name="Arvore11" parent="Arvores" instance=ExtResource("17_x7dkj")]
-position = Vector2(2030, 1379)
+position = Vector2(1106, 1563)
 
 [node name="Arvore12" parent="Arvores" instance=ExtResource("17_x7dkj")]
-position = Vector2(1095, 1648)
+position = Vector2(805, 1640)
+
+[node name="Arvore13" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1207, 1704)
+
+[node name="Arvore14" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1399, 1562)
+
+[node name="Arvore15" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1613, 1704)
+
+[node name="Arvore16" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1807, 1518)
+
+[node name="Arvore17" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1981, 1712)
+
+[node name="Arvore18" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2051, 1476)
+
+[node name="Arvore19" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2193, 1612)
+
+[node name="Arvore20" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2207, 1369)
+
+[node name="Arvore21" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1960, 1238)
+
+[node name="Arvore22" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2210, 1193)
+
+[node name="Arvore23" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(1967, 1052)
+
+[node name="Arvore24" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2219, 954)
+
+[node name="Arvore25" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(2062, 911)
+
+[node name="Arvore26" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-2038, -489)
+
+[node name="Arvore27" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1933, -595)
+
+[node name="Arvore28" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1736, -523)
+
+[node name="Arvore29" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1727, -704)
+
+[node name="Arvore30" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1876, -1068)
+
+[node name="Arvore31" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-2133, -723)
+
+[node name="Arvore32" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-2114, -998)
+
+[node name="Arvore33" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1394, -845)
+
+[node name="Arvore34" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1893, -864)
+
+[node name="Arvore35" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1597, -883)
+
+[node name="Arvore36" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1647, -1033)
+
+[node name="Arvore37" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1111, -989)
+
+[node name="Arvore38" parent="Arvores" instance=ExtResource("17_x7dkj")]
+position = Vector2(-1321, -1006)
 
 [node name="Game UI" parent="." instance=ExtResource("3_hxbb6")]
