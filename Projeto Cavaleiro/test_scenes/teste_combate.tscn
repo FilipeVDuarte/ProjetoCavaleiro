@@ -18,7 +18,7 @@ position = Vector2(1166, -106)
 scale = Vector2(0.955321, 0.955321)
 
 [node name="Player" parent="." instance=ExtResource("2_mpg04")]
-position = Vector2(372, 266)
+position = Vector2(374, 208)
 
 [node name="DragaoLatão" parent="." instance=ExtResource("3_5ujlt")]
 position = Vector2(660, 300)
@@ -28,19 +28,19 @@ scale = Vector2(2.5, 2.5)
 position = Vector2(108, 223)
 
 [node name="Capiguara" parent="." instance=ExtResource("5_m2cpu")]
-position = Vector2(273, 147)
+position = Vector2(651, 474)
 
 [node name="CorpoSeco" parent="." instance=ExtResource("6_23f6t")]
-position = Vector2(278, 494)
+position = Vector2(144, 555)
 
 [node name="CorpoSeco2" parent="." instance=ExtResource("7_3exrp")]
-position = Vector2(226, 382)
+position = Vector2(92, 443)
 
 [node name="CorpoSeco3" parent="." instance=ExtResource("8_eeabk")]
-position = Vector2(423, 461)
+position = Vector2(289, 522)
 
 [node name="Cuca" parent="." instance=ExtResource("9_lnnxc")]
-position = Vector2(552, 467)
+position = Vector2(8, 281)
 
 [node name="Mula" parent="." instance=ExtResource("10_3qvaq")]
-position = Vector2(761, 434)
+position = Vector2(217, 248)

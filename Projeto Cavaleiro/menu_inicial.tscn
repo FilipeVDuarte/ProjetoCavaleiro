@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://ko41rcnhbjkq"]
+[gd_scene load_steps=14 format=3 uid="uid://ko41rcnhbjkq"]
 
 [ext_resource type="Texture2D" uid="uid://cnfgolfp7eyry" path="res://ui/Titulo.png" id="1_0k8py"]
+[ext_resource type="Script" path="res://menu_inicial.gd" id="1_dxw3p"]
 [ext_resource type="Texture2D" uid="uid://23586s1cra65" path="res://ui/Brilho 3.png" id="1_pafy3"]
 [ext_resource type="Texture2D" uid="uid://d05e4yslyojnd" path="res://ui/Brilho 2.png" id="3_7dwlh"]
 [ext_resource type="Texture2D" uid="uid://cqhmkfr2lysf4" path="res://ui/Brilho 1.png" id="4_4vswt"]
+[ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="5_12dyd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d4jpg"]
 texture = ExtResource("1_pafy3")
@@ -16,70 +18,6 @@ texture = ExtResource("3_7dwlh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t8m5"]
 texture = ExtResource("4_4vswt")
-
-[sub_resource type="Animation" id="Animation_urydl"]
-resource_name = "default"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Titulo:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(0.15, 0.15),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.37525, 1.37525)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Titulo/Brilho 3:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(0.15, 0.15),
-"update": 0,
-"values": [-6.28319, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Titulo/Brilho 3:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 2),
-"transitions": PackedFloat32Array(0.15, 0.15),
-"update": 0,
-"values": [Vector2(3.354, 1.985), Vector2(16.1694, 9.57043)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Titulo/Brilho 2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1.1, 4),
-"transitions": PackedFloat32Array(-15, -15),
-"update": 0,
-"values": [0.0, 3.14159]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Titulo/Brilho 1:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(1.1, 4),
-"transitions": PackedFloat32Array(-15, -15),
-"update": 0,
-"values": [0.0, -3.14159]
-}
 
 [sub_resource type="Animation" id="Animation_e52tf"]
 length = 0.001
@@ -143,6 +81,94 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(59, 495)]
+}
+
+[sub_resource type="Animation" id="Animation_urydl"]
+resource_name = "default"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Titulo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 5),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.37525, 1.37525)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Titulo/Brilho 3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 5),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [-6.28319, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Titulo/Brilho 3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.3, 5),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [Vector2(3.354, 1.985), Vector2(16.1694, 9.57043)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Titulo/Brilho 2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.1, 7),
+"transitions": PackedFloat32Array(-15, -15),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Titulo/Brilho 1:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.1, 7),
+"transitions": PackedFloat32Array(-15, -15),
+"update": 0,
+"values": [0.0, -3.14159]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.3, 3.1),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [Vector2(-500, 495), Vector2(59, 495)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_loqlc"]
 _data = {
@@ -157,6 +183,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dxw3p")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -184,6 +211,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = 128.0
+offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.37525, 1.37525)
@@ -259,3 +288,39 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_0t8m5")
 libraries = {
 "": SubResource("AnimationLibrary_loqlc")
 }
+autoplay = "default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 495.0
+offset_right = 284.0
+offset_bottom = 635.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.329412, 0.411765, 0.717647, 1)
+theme_override_colors/font_pressed_color = Color(0.156863, 0.235294, 0.52549, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.858824, 0.996078, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 60
+text = "Começar"
+flat = true
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.329412, 0.411765, 0.717647, 1)
+theme_override_colors/font_pressed_color = Color(0.156863, 0.235294, 0.52549, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.858824, 0.996078, 1)
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 60
+text = "Sair"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
