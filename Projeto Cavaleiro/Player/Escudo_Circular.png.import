@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0nr8pdnj0lld"
-path="res://.godot/imported/Escudo_Circular.png-f6c32a3d32d0c39b30ba721f43d8fb72.ctex"
+path="res://.godot/imported/Escudo_Circular.png-7e005fd1f29858d19f34e3a5046e7384.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/Escudo_Circular.png"
-dest_files=["res://.godot/imported/Escudo_Circular.png-f6c32a3d32d0c39b30ba721f43d8fb72.ctex"]
+source_file="res://Player/Escudo_Circular.png"
+dest_files=["res://.godot/imported/Escudo_Circular.png-7e005fd1f29858d19f34e3a5046e7384.ctex"]
 
 [params]
 

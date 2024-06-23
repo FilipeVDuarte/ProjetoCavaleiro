@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://yfle76qhcct5" path="res://addons/Tiny Swords/Deco/08.png" id="9_ubayw"]
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
-[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://player/player.tscn" id="14_nq1hb"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="14_nq1hb"]
 [ext_resource type="PackedScene" uid="uid://kyentudp651l" path="res://menus/menu_pause.tscn" id="15_c1vq3"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="18_1vctn"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
@@ -210,7 +210,6 @@ script = ExtResource("14_artqg")
 mob_spawner = NodePath("../MobSpawner")
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_o58rk")]
-process_mode = 4
 position = Vector2(5, 0)
 scale = Vector2(1.08891, 1.08891)
 
