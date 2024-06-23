@@ -211,7 +211,7 @@ mob_spawner = NodePath("../MobSpawner")
 
 [node name="MobSpawner" parent="." instance=ExtResource("2_o58rk")]
 position = Vector2(5, 0)
-scale = Vector2(1.08891, 1.08891)
+scale = Vector2(1.42, -0.714133)
 
 [node name="Arvores" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -333,13 +333,13 @@ position = Vector2(-1321, -1006)
 [node name="Game UI" parent="." instance=ExtResource("3_hxbb6")]
 
 [node name="Quest" parent="." instance=ExtResource("20_mp3df")]
-position = Vector2(898, 242)
+position = Vector2(1930, -709)
 
 [node name="Quest2" parent="." instance=ExtResource("20_mp3df")]
-position = Vector2(389, 246)
+position = Vector2(-1466, -691)
 
 [node name="Quest3" parent="." instance=ExtResource("20_mp3df")]
-position = Vector2(900, 468)
+position = Vector2(1580, 1319)
 
 [node name="Quest4" parent="." instance=ExtResource("20_mp3df")]
-position = Vector2(546, 493)
+position = Vector2(-1124, 1064)
