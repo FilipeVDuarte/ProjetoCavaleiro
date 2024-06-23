@@ -1,7 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7t74r0t1w0qm"]
+[gd_scene load_steps=14 format=3 uid="uid://b7t74r0t1w0qm"]
 
+[ext_resource type="Shader" path="res://highlight.gdshader" id="1_aexnh"]
 [ext_resource type="Texture2D" uid="uid://bbywlgmwo2nhi" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="1_rtlo1"]
-[ext_resource type="Script" path="res://misc/life_regen.gd" id="2_new2r"]
+[ext_resource type="Script" path="res://collectables/life_regen.gd" id="2_new2r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p0p3q"]
+shader = ExtResource("1_aexnh")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30wps"]
 atlas = ExtResource("1_rtlo1")
@@ -64,6 +72,7 @@ animations = [{
 radius = 42.0119
 
 [node name="Meat" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_p0p3q")
 sprite_frames = SubResource("SpriteFrames_q70v4")
 autoplay = "default"
 frame = 6

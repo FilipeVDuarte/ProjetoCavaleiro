@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://pomg25lf0eic"]
+[gd_scene load_steps=10 format=3 uid="uid://pomg25lf0eic"]
 
-[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="1_8tblp"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://collectables/meat.tscn" id="1_8tblp"]
 [ext_resource type="Texture2D" uid="uid://d1f22r1swsou" path="res://addons/Kenny Particle Pack/magic_05.png" id="2_fyr6g"]
+[ext_resource type="Shader" path="res://highlight.gdshader" id="2_tgxou"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fa2y0"]
+shader = ExtResource("2_tgxou")
+shader_parameter/highlight_color = Color(1, 1, 0, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="Gradient" id="Gradient_ptqsd"]
 colors = PackedColorArray(1, 0.290196, 0.00784314, 1, 1, 1, 0, 1)
@@ -28,8 +36,7 @@ color_ramp = SubResource("GradientTexture1D_5owcl")
 emission_curve = SubResource("CurveTexture_5l48r")
 
 [node name="Meat" instance=ExtResource("1_8tblp")]
-self_modulate = Color(1, 1, 0, 1)
-scale = Vector2(1.5, 1.5)
+material = SubResource("ShaderMaterial_fa2y0")
 regen_amount = 100
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." index="0"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://u80klxk3x68x"]
 
 [ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="1_t1w8g"]
-[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="2_mpg04"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://player/player.tscn" id="2_mpg04"]
 [ext_resource type="PackedScene" uid="uid://mqm43f68ov35" path="res://enemies/scenes/dragao_latao.tscn" id="3_5ujlt"]
 [ext_resource type="PackedScene" uid="uid://yerww5qdawwl" path="res://enemies/scenes/boitata.tscn" id="4_jm1ua"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="5_m2cpu"]

@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_oobsk"]
 [ext_resource type="PackedScene" uid="uid://cjstm6kgk56mb" path="res://misc/skull.tscn" id="2_r2pl2"]
 [ext_resource type="Texture2D" uid="uid://b8gcfrsee2xvo" path="res://enemies/textures/CorpoSeco_v2.png" id="3_8yolh"]
-[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="3_om3v1"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://collectables/meat.tscn" id="3_om3v1"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_c6dhm"]
-[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://misc/pumpkin.tscn" id="4_e8e8u"]
-[ext_resource type="PackedScene" uid="uid://pomg25lf0eic" path="res://misc/golden_meat.tscn" id="5_o882u"]
-[ext_resource type="PackedScene" uid="uid://dpkamruysihbf" path="res://misc/special_pumpkin.tscn" id="6_l0a66"]
-[ext_resource type="PackedScene" uid="uid://dfvnb2rgv81na" path="res://misc/real.tscn" id="7_ek5ib"]
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://collectables/pumpkin.tscn" id="4_e8e8u"]
+[ext_resource type="PackedScene" uid="uid://pomg25lf0eic" path="res://collectables/golden_meat.tscn" id="5_o882u"]
+[ext_resource type="PackedScene" uid="uid://dpkamruysihbf" path="res://collectables/special_pumpkin.tscn" id="6_l0a66"]
+[ext_resource type="PackedScene" uid="uid://dfvnb2rgv81na" path="res://collectables/real.tscn" id="7_ek5ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
 size = Vector2(26, 35)

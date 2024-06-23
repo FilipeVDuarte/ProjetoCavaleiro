@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://byckqu4qwpc54"]
 
-[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="1_77vdj"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://player/player.tscn" id="1_77vdj"]
 [ext_resource type="PackedScene" uid="uid://bsslek606dpxw" path="res://ui/game_UI.tscn" id="2_e3pqo"]
-[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="3_857xu"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://collectables/meat.tscn" id="3_857xu"]
 
 [node name="Node2D" type="Node2D"]
 

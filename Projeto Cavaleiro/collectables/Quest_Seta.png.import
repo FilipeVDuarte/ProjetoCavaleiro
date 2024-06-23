@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0nr8pdnj0lld"
-path="res://.godot/imported/Escudo_Circular.png-f6c32a3d32d0c39b30ba721f43d8fb72.ctex"
+uid="uid://csw74galxknpc"
+path="res://.godot/imported/Quest_Seta.png-6d72a0e4003d8f198e2776249620ece7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/Escudo_Circular.png"
-dest_files=["res://.godot/imported/Escudo_Circular.png-f6c32a3d32d0c39b30ba721f43d8fb72.ctex"]
+source_file="res://collectables/Quest_Seta.png"
+dest_files=["res://.godot/imported/Quest_Seta.png-6d72a0e4003d8f198e2776249620ece7.ctex"]
 
 [params]
 

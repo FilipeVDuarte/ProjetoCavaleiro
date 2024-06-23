@@ -19,6 +19,7 @@ extends CharacterBody2D
 
 @export_category("Itens")
 @export var item_cc:int = 0
+@export var item_qc:int = 0
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -45,6 +46,7 @@ func _ready():
 	GameManager.player = self
 	meat_collected.connect(func(value: int): GameManager.vida_counter += 1)
 	coin_collected.connect(func(value: int): GameManager.coin_counter += 1)
+	quest_collected.connect(func(value: int): GameManager.quest_counter += 1)
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
@@ -225,6 +227,7 @@ func coin_collect(coin_amount:int) -> void:
 	item_cc += coin_amount
 	print("jogador achou ", coin_amount, " total de ", item_cc)
 
-func objectivequest(quest_amount: int) -> void:
-	quest_collected.connect(func(value: int): GameManager.quest_counter += 1)
-	print(GameManager.quest_counter)
+func quest_collect(quest_amount: int) -> void:
+	item_cc += quest_amount
+	#quest_collected.connect(func(value: int): GameManager.quest_counter += 1)
+	#print(GameManager.quest_counter)

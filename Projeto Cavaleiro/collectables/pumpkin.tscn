@@ -1,7 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://cb1l2tlca7l7r"]
+[gd_scene load_steps=14 format=3 uid="uid://cb1l2tlca7l7r"]
 
 [ext_resource type="Texture2D" uid="uid://7t4rbj35wp6b" path="res://addons/Tiny Swords/Resources/Resources/P_Spawn.png" id="1_mv3rf"]
-[ext_resource type="Script" path="res://misc/life_regen.gd" id="2_w6nvh"]
+[ext_resource type="Shader" path="res://highlight.gdshader" id="1_v2q5o"]
+[ext_resource type="Script" path="res://collectables/life_regen.gd" id="2_w6nvh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e3u7t"]
+shader = ExtResource("1_v2q5o")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sv4gt"]
 atlas = ExtResource("1_mv3rf")
@@ -64,6 +72,7 @@ animations = [{
 radius = 42.0119
 
 [node name="Pumpkin" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_e3u7t")
 sprite_frames = SubResource("SpriteFrames_q70v4")
 autoplay = "default"
 frame = 6

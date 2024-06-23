@@ -1,6 +1,6 @@
-extends Sprite2D
+extends Node2D
 
-@export var quest_amount: int = 0
+@export var quest_amount: int = 1
 
 func _ready():
 	$Area2D.body_entered.connect(on_body_entered)
@@ -8,6 +8,6 @@ func _ready():
 func on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		var player: Player = body
-		player.objectivequest(quest_amount)
+		player.quest_collect(quest_amount)
 		player.quest_collected.emit(quest_amount)
 		queue_free()

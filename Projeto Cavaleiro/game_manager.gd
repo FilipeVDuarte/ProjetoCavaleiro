@@ -13,7 +13,6 @@ var coin_counter:int = 0
 var enemy_defeated_counter: int = 0
 var quest_counter: int = 0
 
-
 func _process(delta:float):
 	time_elapsed += delta
 	# Floor - Arredonda valor pra baixo + i Retorna valor inteiro
@@ -27,7 +26,7 @@ func _process(delta:float):
 	# o d significa que é um digito, que estamos passando um numero inteiro
 	# e o 02 significa que vamos passar dois numeros
 	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
-
+		
 func end_game():
 	if is_game_over: return
 	is_game_over = true

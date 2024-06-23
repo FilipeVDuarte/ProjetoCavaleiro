@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dfvnb2rgv81na"]
 
-[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://misc/meat.tscn" id="1_62mc4"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://collectables/meat.tscn" id="1_62mc4"]
 [ext_resource type="Texture2D" uid="uid://daln2hfwbjljx" path="res://addons/Tiny Swords/Resources/Resources/Real_Spawn.png" id="2_7bwmc"]
-[ext_resource type="Script" path="res://misc/coin_collect.gd" id="3_24klr"]
+[ext_resource type="Script" path="res://collectables/coin_collect.gd" id="3_24klr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwlss"]
 atlas = ExtResource("2_7bwmc")
@@ -63,6 +63,5 @@ animations = [{
 
 [node name="Real" instance=ExtResource("1_62mc4")]
 sprite_frames = SubResource("SpriteFrames_assw5")
-frame_progress = 0.0
 script = ExtResource("3_24klr")
 coin_amount = 1

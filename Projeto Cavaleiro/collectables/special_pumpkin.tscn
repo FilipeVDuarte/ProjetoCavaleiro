@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpkamruysihbf"]
+[gd_scene load_steps=10 format=3 uid="uid://dpkamruysihbf"]
 
-[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://misc/pumpkin.tscn" id="1_rxpne"]
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://collectables/pumpkin.tscn" id="1_rxpne"]
 [ext_resource type="Texture2D" uid="uid://d1f22r1swsou" path="res://addons/Kenny Particle Pack/magic_05.png" id="2_mmvb2"]
+[ext_resource type="Shader" path="res://highlight.gdshader" id="2_on5lx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nx374"]
+shader = ExtResource("2_on5lx")
+shader_parameter/highlight_color = Color(0.333333, 0, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [sub_resource type="Gradient" id="Gradient_qoray"]
 offsets = PackedFloat32Array(0.175732, 1)
@@ -34,7 +42,7 @@ turbulence_influence_min = 0.0
 turbulence_influence_max = 0.786
 
 [node name="Pumpkin" instance=ExtResource("1_rxpne")]
-self_modulate = Color(0.945072, 0.000947021, 0.976961, 1)
+material = SubResource("ShaderMaterial_nx374")
 regen_amount = 100
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." index="0"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://hybuulxrh3nm"]
+
+[ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="1_ff73v"]
+
+[node name="TesteQuest" type="Node2D"]
+
+[node name="Quest" parent="." instance=ExtResource("1_ff73v")]
+position = Vector2(340, 264)

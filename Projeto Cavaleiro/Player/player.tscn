@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://cytvyxkffphc7"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_1or6k"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_1or6k"]
 [ext_resource type="PackedScene" uid="uid://be4vonu1tayg5" path="res://misc/big_skull.tscn" id="2_1qstg"]
-[ext_resource type="Texture2D" uid="uid://d30vexk5hff6f" path="res://Player/Ficino_base.png" id="2_hl0fq"]
-[ext_resource type="Texture2D" uid="uid://ce7w7mpvowkfd" path="res://Player/slash.png" id="2_qi6jb"]
+[ext_resource type="Texture2D" uid="uid://d30vexk5hff6f" path="res://player/Ficino_base.png" id="2_hl0fq"]
+[ext_resource type="Texture2D" uid="uid://ce7w7mpvowkfd" path="res://player/slash.png" id="2_qi6jb"]
 [ext_resource type="PackedScene" uid="uid://da5bqulvjvkak" path="res://misc/ritual.tscn" id="2_wllbm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s17r7"]

@@ -1,0 +1,133 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8haj6tflarh8"]
+
+[ext_resource type="Shader" path="res://highlight.gdshader" id="1_4gi18"]
+[ext_resource type="Script" path="res://collectables/quest.gd" id="1_4jaaa"]
+[ext_resource type="Texture2D" uid="uid://b3112kx175y4s" path="res://collectables/Quest_Losangulo.png" id="2_ro2dd"]
+[ext_resource type="Texture2D" uid="uid://csw74galxknpc" path="res://collectables/Quest_Seta.png" id="3_4h3qe"]
+[ext_resource type="Texture2D" uid="uid://ctmtlkn8wabet" path="res://collectables/Quest_Bolinha.png" id="4_qbjms"]
+
+[sub_resource type="Shader" id="Shader_am42p"]
+code = "shader_type canvas_item;
+
+// The color that flashes when highlighting the sprite
+uniform vec4 highlight_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+
+// Used to control the time between flashes
+uniform float frequency : hint_range(0.0, 25.0) = 0.35;
+
+// Speed of each flash
+uniform float highlight_speed : hint_range(0.0, 25.0) = 6.0;
+
+// How much area each flash covers (width)
+uniform float highlight_width : hint_range(0.0, 50.0) = 15.0;
+
+void fragment( )
+{
+	vec4 input_color = texture(TEXTURE, UV);
+	float width = 0.001 * frequency * highlight_width / 2.0;
+	
+	// can play with + or - sign for each UV
+	// to control which direction the highlight moves
+	// ex. -UV.x - UV.y makes the highlight go from
+	// top left to bottom right
+	float value = floor(sin(frequency * ((UV.x - UV.y) + TIME * highlight_speed)) + width);
+	
+	// used to control when to use input color vs highlight color
+	float highlight = value > 0.5? 1.0: 0.0;
+	vec3 new_color = input_color.rgb * (1.0 - highlight) + highlight_color.rgb * highlight;
+	COLOR = vec4(new_color, input_color.a);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nvajt"]
+shader = SubResource("Shader_am42p")
+shader_parameter/highlight_color = Color(0.329412, 0.411765, 0.717647, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cxofp"]
+shader = SubResource("Shader_am42p")
+shader_parameter/highlight_color = Color(0.329412, 0.411765, 0.717647, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nv5oy"]
+shader = ExtResource("1_4gi18")
+shader_parameter/highlight_color = Color(0.329412, 0.411765, 0.717647, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ir647"]
+radius = 42.0119
+
+[sub_resource type="Animation" id="Animation_iwews"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/QuestSeta:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_o822r"]
+resource_name = "default"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/QuestSeta:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsycn"]
+_data = {
+"RESET": SubResource("Animation_iwews"),
+"default": SubResource("Animation_o822r")
+}
+
+[node name="Quest" type="Node2D"]
+script = ExtResource("1_4jaaa")
+
+[node name="Node2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+
+[node name="QuestLosangulo" type="Sprite2D" parent="Node2D"]
+material = SubResource("ShaderMaterial_nvajt")
+texture = ExtResource("2_ro2dd")
+
+[node name="QuestSeta" type="Sprite2D" parent="Node2D"]
+material = SubResource("ShaderMaterial_cxofp")
+position = Vector2(0, -10)
+texture = ExtResource("3_4h3qe")
+
+[node name="QuestBolinha" type="Sprite2D" parent="Node2D"]
+material = SubResource("ShaderMaterial_nv5oy")
+texture = ExtResource("4_qbjms")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -17)
+shape = SubResource("CircleShape2D_ir647")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nsycn")
+}
+autoplay = "default"
