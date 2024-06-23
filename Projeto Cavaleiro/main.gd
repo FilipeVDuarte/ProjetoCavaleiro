@@ -3,7 +3,9 @@ extends Node2D
 @export var game_ui: CanvasLayer
 @export var game_over_ui_template: PackedScene
 
-@onready var pause_menu = $Camera2D/Menu_PauseMenu_Pause
+
+@onready var menu_pause = %Menu_Pause
+
 var paused = false
 
 func _ready():
@@ -11,14 +13,14 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Pause"):
-		pauseMenu()
+		pause_Menu()
 
-func pauseMenu():
+func pause_Menu():
 	if paused:
-		pause_menu.hide()
+		menu_pause.hide()
 		Engine.time_scale = 1
 	else:
-		pause_menu.show()
+		menu_pause.show()
 		Engine.time_scale = 0
 		
 	paused = !paused

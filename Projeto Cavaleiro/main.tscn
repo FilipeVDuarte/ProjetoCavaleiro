@@ -16,9 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://yfle76qhcct5" path="res://addons/Tiny Swords/Deco/08.png" id="9_ubayw"]
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
+[ext_resource type="PackedScene" uid="uid://kyentudp651l" path="res://menus/menu_pause.tscn" id="15_c1vq3"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://misc/arvore.tscn" id="17_x7dkj"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
-[ext_resource type="PackedScene" uid="uid://kyentudp651l" path="res://menu_pause.tscn" id="19_tdeph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwq1m"]
 texture = ExtResource("1_yifut")
@@ -198,7 +198,8 @@ update_scale = false
 position = Vector2(615, 331)
 scale = Vector2(2, 2)
 
-[node name="Menu_Pause" parent="Camera2D" instance=ExtResource("19_tdeph")]
+[node name="Menu_Pause" parent="Camera2D" instance=ExtResource("15_c1vq3")]
+unique_name_in_owner = true
 visible = false
 y_sort_enabled = true
 

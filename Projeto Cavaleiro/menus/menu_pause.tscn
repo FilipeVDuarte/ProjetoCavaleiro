@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://kyentudp651l"]
 
 [ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="1_b8bqd"]
-[ext_resource type="Script" path="res://menu_pause.gd" id="1_fd7le"]
+[ext_resource type="Script" path="res://menus/menu_pause.gd" id="1_fd7le"]
 [ext_resource type="Shader" path="res://blurr.gdshader" id="2_b34rm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5dsr4"]

@@ -13,6 +13,8 @@ var damage_digit_prefab: PackedScene
 @export var drop_itens: Array[PackedScene]
 @export var drop_chances: Array[float]
 
+signal damaged
+
 func _ready():
 	damage_digit_prefab = preload("res://misc/damage_digit.tscn")
 
@@ -40,6 +42,11 @@ func damage(amount: int) -> void:
 		
 	if health <= 0:
 		die()
+
+func _on_enemy_damaged(amount: int) -> void:
+	# Aqui você pode adicionar qualquer lógica
+	# que precisa ser executada quando o inimigo é danificado
+	print("Sinal de dano recebido com valor: ", amount)
 
 func die() -> void:
 	#Caveira

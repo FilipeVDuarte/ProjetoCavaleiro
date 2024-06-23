@@ -14,7 +14,7 @@ config/name="Projeto Cavaleiro"
 config/description="Projeto Multimidia de Filipe Duarte
 "
 config/version="1.0"
-run/main_scene="res://main.tscn"
+run/main_scene="res://menus/menu_inicial.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
