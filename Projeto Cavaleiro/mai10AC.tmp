@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://br7ahv7r5fn33"]
+[gd_scene load_steps=36 format=3 uid="uid://br7ahv7r5fn33"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ug5al"]
 [ext_resource type="Texture2D" uid="uid://dexjk5ig5no80" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="1_yifut"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="14_nq1hb"]
-[ext_resource type="Script" path="res://Player/player.gd" id="15_bagek"]
 [ext_resource type="PackedScene" uid="uid://kyentudp651l" path="res://menus/menu_pause.tscn" id="15_c1vq3"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="18_1vctn"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
@@ -184,14 +183,6 @@ debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 [node name="Player" parent="." instance=ExtResource("14_nq1hb")]
 position = Vector2(615, 331)
 scale = Vector2(2.5, 2.5)
-script = ExtResource("15_bagek")
-speed = 300.0
-damage = 2
-ritual_interval = 15.0
-health = 100
-max_health = 100
-item_cc = 0
-item_qc = 0
 
 [node name="RemoteTransform2D - Camera" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -342,12 +333,16 @@ position = Vector2(-1321, -1006)
 
 [node name="Quest" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(1930, -709)
+quest_amount = null
 
 [node name="Quest2" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(-1466, -691)
+quest_amount = null
 
 [node name="Quest3" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(1580, 1319)
+quest_amount = null
 
 [node name="Quest4" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(-1124, 1064)
+quest_amount = null

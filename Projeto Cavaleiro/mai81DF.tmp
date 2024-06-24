@@ -188,8 +188,10 @@ script = ExtResource("15_bagek")
 speed = 300.0
 damage = 2
 ritual_interval = 15.0
+ritual_scene = null
 health = 100
 max_health = 100
+death_prefab = null
 item_cc = 0
 item_qc = 0
 

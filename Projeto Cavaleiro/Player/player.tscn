@@ -1,10 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cytvyxkffphc7"]
+[gd_scene load_steps=15 format=3 uid="uid://cytvyxkffphc7"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_1or6k"]
-[ext_resource type="PackedScene" uid="uid://be4vonu1tayg5" path="res://misc/big_skull.tscn" id="2_1qstg"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_4v2w6"]
 [ext_resource type="Texture2D" uid="uid://d30vexk5hff6f" path="res://Player/Ficino_base.png" id="2_hl0fq"]
 [ext_resource type="Texture2D" uid="uid://ce7w7mpvowkfd" path="res://Player/slash.png" id="2_qi6jb"]
-[ext_resource type="PackedScene" uid="uid://da5bqulvjvkak" path="res://misc/ritual.tscn" id="2_wllbm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s17r7"]
 radius = 7.5
@@ -217,10 +215,7 @@ bg_color = Color(0.79, 0, 0, 1)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
-script = ExtResource("1_1or6k")
-ritual_damage = 2
-ritual_scene = ExtResource("2_wllbm")
-death_prefab = ExtResource("2_1qstg")
+script = ExtResource("1_4v2w6")
 
 [node name="Slash" type="Sprite2D" parent="."]
 visible = false

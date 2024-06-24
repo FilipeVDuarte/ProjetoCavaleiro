@@ -9,13 +9,13 @@ extends CharacterBody2D
 
 @export_category("Ritual")
 @export var ritual_damage: int = 0
-@export var ritual_interval: float = 15
-@export var ritual_scene: PackedScene
+@export var ritual_interval: float = 15.0
+@export var ritual_scene:  PackedScene = preload("res://misc/ritual.tscn")
 
 @export_category("Health")
 @export var health: int = 100
 @export var max_health: int = 100
-@export var death_prefab: PackedScene
+@export var death_prefab: PackedScene = preload("res://misc/big_skull.tscn" )
 
 @export_category("Itens")
 @export var item_cc:int = 0
