@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="Projeto Cavaleiro"
+config/name_localized={
+"en_US": "Brass Knight",
+"pt_BR": "Cavaleiro de Latão"
+}
 config/description="Projeto Multimidia de Filipe Duarte
 "
 config/version="1.0"
