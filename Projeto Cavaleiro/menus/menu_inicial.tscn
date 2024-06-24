@@ -235,7 +235,7 @@ theme_override_colors/font_hover_color = Color(0.807843, 0.858824, 0.996078, 1)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 60
-text = "Começar"
+text = "Iniciar"
 flat = true
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
