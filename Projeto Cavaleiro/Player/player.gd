@@ -9,7 +9,8 @@ extends CharacterBody2D
 
 @export_category("Ritual")
 @export var ritual_damage: int = 0
-@export var ritual_interval: float = 15.0
+@export var ritual_interval: float = 1.0
+@export var ritual_cooldown: float = 0.0
 @export var ritual_scene:  PackedScene = preload("res://misc/ritual.tscn")
 
 @export_category("Health")
@@ -34,7 +35,7 @@ var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float = 0.0
 var hitbox_cooldown: float = 0.0
-var ritual_cooldown: float = 0.0
+var cooldown_ritual: float = 0.0
 
 signal meat_collected(value: int)
 signal mark_collected(value: int)
@@ -57,6 +58,7 @@ func _process(delta: float) -> void:
 	#Processar ataque
 	update_attack_cooldown(delta)
 	if Input.is_action_just_pressed("shoot"):
+		print("botao 1 ok")
 		attack()
 		
 	# Processar animação de andar e parado
@@ -67,8 +69,15 @@ func _process(delta: float) -> void:
 	#Processar dano
 	update_hitbox_detection(delta)
 	
-	#Ritual
+	
 	update_ritual(delta)
+	#Ritual
+	if Input.is_action_just_pressed("shoot_b"):
+		if ritual_cooldown <= 0: return
+		else:
+			print("botao 2 ok")
+			ritual(delta)
+			
 	
 	#Atualizar Barra de Vida
 	health_progress_bar.max_value = max_health
@@ -97,10 +106,14 @@ func update_attack_cooldown(delta: float) -> void:
 func update_ritual(delta: float) -> void:
 	#Atualizar temporizador
 	ritual_cooldown -= delta
+	print(ritual_cooldown)
 	if ritual_cooldown > 0: return
+	cooldown_ritual = ritual_cooldown
 	#Resetar Temporizador
 	ritual_cooldown = ritual_interval
 	
+	
+func ritual(delta: float) -> void:
 	#Criar Ritual || instanciou e colou no player
 	var ritual = ritual_scene.instantiate()
 	ritual_damage = ritual.damage_amount
@@ -172,7 +185,7 @@ func deal_damage_to_enemies() -> void:
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			if dot_product >= 0.3:
 				enemy.damage(damage) 
-			print("Dot: ", dot_product)
+			#print("Dot: ", dot_product)
 
 func update_hitbox_detection(delta: float) -> void:
 	#Temporizador

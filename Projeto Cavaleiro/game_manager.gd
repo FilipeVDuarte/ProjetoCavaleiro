@@ -12,6 +12,8 @@ var vida_counter:int = 0
 var coin_counter:int = 0
 var enemy_defeated_counter: int = 0
 var quest_counter: int = 0
+var ritual_cooldown: float = 0.0
+var cooldown_ritual: float = 0.0
 
 func _process(delta:float):
 	time_elapsed += delta
@@ -26,12 +28,13 @@ func _process(delta:float):
 	# o d significa que é um digito, que estamos passando um numero inteiro
 	# e o 02 significa que vamos passar dois numeros
 	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
+	
+	cooldown_ritual = player.cooldown_ritual
 		
 func end_game():
 	if is_game_over: return
 	is_game_over = true
 	game_over.emit()
-
 
 func reset():
 	player = null

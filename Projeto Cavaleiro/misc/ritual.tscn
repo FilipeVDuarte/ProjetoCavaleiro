@@ -475,7 +475,7 @@ _data = {
 blend_mode = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h4gcw"]
-radius = 169.145
+radius = 78.3135
 
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_sobug")
@@ -491,6 +491,7 @@ modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.5, 0.5)
 
 [node name="Twirl01" type="Sprite2D" parent="Images"]
+visible = false
 material = SubResource("CanvasItemMaterial_rd5hl")
 rotation = -1.92277
 scale = Vector2(0.469272, 0.469272)

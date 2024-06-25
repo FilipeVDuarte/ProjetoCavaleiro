@@ -292,3 +292,14 @@ text = "00:15
 label_settings = SubResource("LabelSettings_ltay6")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CooldownRitual" type="ProgressBar" parent="ReferenceRect"]
+unique_name_in_owner = true
+offset_left = 1054.0
+offset_top = 480.0
+offset_right = 1169.0
+offset_bottom = 588.0
+max_value = 10.0
+value = 10.0
+fill_mode = 3
+show_percentage = false

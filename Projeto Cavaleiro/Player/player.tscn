@@ -216,6 +216,8 @@ bg_color = Color(0.79, 0, 0, 1)
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
 script = ExtResource("1_4v2w6")
+ritual_interval = 15.0
+ritual_cooldown = 10.0
 
 [node name="Slash" type="Sprite2D" parent="."]
 visible = false
@@ -243,7 +245,6 @@ autoplay = "idle"
 speed_scale = 0.5
 
 [node name="Attack_Area" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_Area"]
 position = Vector2(11, -7.8614)
