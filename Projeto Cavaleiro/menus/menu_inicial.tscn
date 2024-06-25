@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ko41rcnhbjkq"]
+[gd_scene load_steps=14 format=3 uid="uid://ko41rcnhbjkq"]
 
 [ext_resource type="Texture2D" uid="uid://cnfgolfp7eyry" path="res://ui/Titulo.png" id="1_0k8py"]
 [ext_resource type="Script" path="res://menus/menu_inicial.gd" id="1_dxw3p"]
@@ -29,7 +29,7 @@ tracks/0/path = NodePath("Titulo:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 4),
+"times": PackedFloat32Array(1.5, 4.5),
 "transitions": PackedFloat32Array(0.15, 0.15),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.37525, 1.37525)]
@@ -41,7 +41,7 @@ tracks/1/path = NodePath("Titulo/Brilho 3:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1, 4),
+"times": PackedFloat32Array(1.5, 4.5),
 "transitions": PackedFloat32Array(0.15, 0.15),
 "update": 0,
 "values": [-6.28319, 0.0]
@@ -53,7 +53,7 @@ tracks/2/path = NodePath("Titulo/Brilho 3:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.3, 4),
+"times": PackedFloat32Array(1.8, 4.5),
 "transitions": PackedFloat32Array(0.15, 0.15),
 "update": 0,
 "values": [Vector2(3.354, 1.985), Vector2(16.1694, 9.57043)]
@@ -65,7 +65,7 @@ tracks/3/path = NodePath("Titulo/Brilho 2:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(2, 4, 6, 8, 10, 12),
+"times": PackedFloat32Array(2.5, 4.5, 6.5, 8, 10, 12),
 "transitions": PackedFloat32Array(-15, -15, -15, -15, -15, -15),
 "update": 0,
 "values": [0.0, 3.14159, 0.0, 3.14159, 0.0, 3.14159]
@@ -77,7 +77,7 @@ tracks/4/path = NodePath("Titulo/Brilho 1:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = false
 tracks/4/keys = {
-"times": PackedFloat32Array(2, 4, 6, 8, 10, 12),
+"times": PackedFloat32Array(2.5, 4.5, 6.5, 8, 10, 12),
 "transitions": PackedFloat32Array(-15, -15, -15, -15, -15, -15),
 "update": 0,
 "values": [0.0, 3.14159, 0.0, 3.14159, 0.0, 3.14159]
@@ -89,14 +89,42 @@ tracks/5/path = NodePath("VBoxContainer:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(1.3, 2.1),
+"times": PackedFloat32Array(1.8, 2.6),
 "transitions": PackedFloat32Array(0.15, 0.15),
 "update": 0,
 "values": [Vector2(-500, 495), Vector2(59, 495)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background2:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(4.16089, 4.16089),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ssh1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_loqlc"]
 _data = {
+"RESET": SubResource("Animation_ssh1m"),
 "default": SubResource("Animation_urydl")
 }
 
@@ -118,16 +146,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.952941, 0.65098, 0.0627451, 1)
 
-[node name="Background2" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="Titulo" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -139,7 +157,7 @@ offset_left = 128.0
 offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.37525, 1.37525)
+scale = Vector2(1.35679, 1.35679)
 
 [node name="Brilho 3" type="Panel" parent="Titulo"]
 layout_mode = 1
@@ -154,7 +172,8 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(16.1694, 9.57043)
+rotation = -0.0843331
+scale = Vector2(15.8222, 9.36491)
 pivot_offset = Vector2(20, 20)
 theme_override_styles/panel = SubResource("StyleBoxTexture_d4jpg")
 
@@ -188,7 +207,6 @@ offset_right = -69.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = 3.14159
 scale = Vector2(3.14356, 1.77715)
 pivot_offset = Vector2(20, 20)
 theme_override_styles/panel = SubResource("StyleBoxTexture_djyv7")
@@ -206,7 +224,6 @@ offset_right = 171.0
 offset_bottom = -67.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = 3.14159
 pivot_offset = Vector2(48, 31)
 theme_override_styles/panel = SubResource("StyleBoxTexture_0t8m5")
 
@@ -247,6 +264,15 @@ theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 60
 text = "Sair"
 flat = true
+
+[node name="Background2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="14_nq1hb"]
-[ext_resource type="PackedScene" uid="uid://kyentudp651l" path="res://menus/menu_pause.tscn" id="15_c1vq3"]
+[ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="15_a2naq"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="18_1vctn"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
 [ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="20_mp3df"]
@@ -195,15 +195,6 @@ remote_path = NodePath("../../MobSpawner")
 update_rotation = false
 update_scale = false
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(615, 331)
-scale = Vector2(2, 2)
-
-[node name="Menu_Pause" parent="Camera2D" instance=ExtResource("15_c1vq3")]
-unique_name_in_owner = true
-visible = false
-y_sort_enabled = true
-
 [node name="Difficulty_System" type="Node" parent="." node_paths=PackedStringArray("mob_spawner")]
 script = ExtResource("14_artqg")
 mob_spawner = NodePath("../MobSpawner")
@@ -342,3 +333,11 @@ position = Vector2(1580, 1319)
 
 [node name="Quest4" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(-1124, 1064)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(615, 331)
+scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("15_a2naq")]

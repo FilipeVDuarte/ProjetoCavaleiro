@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5q3hs8q0sph3"]
+
+[ext_resource type="Script" path="res://menus/pause_menu.gd" id="1_lddm3"]
+
+[node name="Pause_Menu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lddm3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.403922)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -50.5
+offset_right = 38.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.35809, 2.35809)
+pivot_offset = Vector2(38, 50)
+theme_override_constants/v_separation = 8
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Pausado"
+horizontal_alignment = 1
+
+[node name="RetomarBtn" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Retomar"
+
+[node name="SairBtn" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Sair"
+
+[connection signal="pressed" from="GridContainer/RetomarBtn" to="." method="_on_retomar_btn_pressed"]
+[connection signal="pressed" from="GridContainer/SairBtn" to="." method="_on_sair_btn_pressed"]
