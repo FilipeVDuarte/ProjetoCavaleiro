@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var moeda_label:Label = %LabelMoedas
 @onready var quest_label:Label = %LabelQuest
 
-func _process(delta: float):
+func _process(_delta: float):
 	#Update Labels
 	time_label.text = GameManager.time_elapsed_string
 	vida_label.text = str(GameManager.vida_counter)

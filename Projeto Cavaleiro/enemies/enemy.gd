@@ -80,6 +80,7 @@ func get_random_drop_item() -> PackedScene:
 	#@export var drop_chances: Array[float]
 	#Calcular Chance Máxima
 	var max_chances: float = 0.0
+	@warning_ignore("shadowed_variable", "shadowed_variable")
 	for drop_chance in drop_chances:
 		max_chances += drop_chance
 	
@@ -90,7 +91,10 @@ func get_random_drop_item() -> PackedScene:
 	#Gira Roleta
 	var needle: float = 0.0
 	for i in drop_itens.size():
+		@warning_ignore("shadowed_variable")
 		var drop_item = drop_itens[i]
+		
+		@warning_ignore("shadowed_variable", "incompatible_ternary")
 		var drop_chance = drop_chances[i] if i < drop_chances.size() else 1
 		if random_value <= drop_chance + needle:
 			return drop_item
