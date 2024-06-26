@@ -1,3 +1,4 @@
+class_name Level
 extends Node2D
 
 @export var game_ui: CanvasLayer
@@ -6,6 +7,10 @@ extends Node2D
 
 func _ready():
 	GameManager.game_over.connect(trigger_game_over)
+	GameManager.start_timer() # Inicia a contagem do tempo
+
+func _exit_tree():
+	GameManager.stop_timer() # Para a contagem do tempo
 
 func trigger_game_over():
 	#Deletar Game UI

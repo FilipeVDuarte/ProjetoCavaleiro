@@ -12,6 +12,5 @@ func _ready():
 		animation_player.play("default")
 	
 
-
-func _on_back_button_pressed():
+func _on_voltar_button_pressed():
 	get_tree().change_scene_to_file("res://menus/menu_inicial.tscn")

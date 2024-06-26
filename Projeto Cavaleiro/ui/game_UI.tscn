@@ -295,6 +295,7 @@ vertical_alignment = 1
 
 [node name="CooldownRitual" type="ProgressBar" parent="ReferenceRect"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 1054.0
 offset_top = 480.0

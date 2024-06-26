@@ -15,19 +15,23 @@ var quest_counter: int = 0
 var ritual_cooldown: float = 0.0
 var cooldown_ritual: float = 0.0
 
+# Variável para verificar se a cena Level está rodando
+var is_level_running: bool = false
+
 func _process(delta:float):
-	time_elapsed += delta
-	# Floor - Arredonda valor pra baixo + i Retorna valor inteiro
-	# Rounded - Arredonda pra baixo ou pra cima depende do valor
-	# ceil - Arredonda pra cima
-	var time_elapsed_in_seconds:int = floori(time_elapsed)
-	var seconds: int = time_elapsed_in_seconds % 60
-	var minutes: int = time_elapsed_in_seconds / 60
-	
-	# Quando começa com %, significa que vamos passar uma variavel para texto
-	# o d significa que é um digito, que estamos passando um numero inteiro
-	# e o 02 significa que vamos passar dois numeros
-	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
+	if is_level_running:
+		time_elapsed += delta
+		var time_elapsed_in_seconds: int = floori(time_elapsed)
+		var seconds: int = time_elapsed_in_seconds % 60
+		var minutes: int = time_elapsed_in_seconds / 60
+		time_elapsed_string = "%02d:%02d" % [minutes, seconds]
+		
+		# Floor - Arredonda valor pra baixo + i Retorna valor inteiro
+		# Rounded - Arredonda pra baixo ou pra cima depende do valor
+		# ceil - Arredonda pra cima
+		# Quando começa com %, significa que vamos passar uma variavel para texto
+		# o d significa que é um digito, que estamos passando um numero inteiro
+		# e o 02 significa que vamos passar dois numeros
 	
 	#cooldown_ritual = player.cooldown_ritual
 		
@@ -50,3 +54,9 @@ func reset():
 	
 	for connection in game_over.get_connections():
 		game_over.disconnect(connection.callable)
+
+func start_timer():
+	is_level_running = true
+
+func stop_timer():
+	is_level_running = false

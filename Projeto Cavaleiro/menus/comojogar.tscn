@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bvxb4onqmw18b"]
+[gd_scene load_steps=30 format=3 uid="uid://bvxb4onqmw18b"]
 
 [ext_resource type="Script" path="res://menus/comojogar.gd" id="1_7o1uv"]
 [ext_resource type="Texture2D" uid="uid://btvlkn8f6qtx1" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="3_46ckh"]
@@ -6,6 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="5_5tryw"]
 [ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="6_bajqt"]
 [ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="6_lrw3v"]
+[ext_resource type="Texture2D" uid="uid://ccacx6pnvperh" path="res://ui/botoes/JOY_ALL.png" id="7_fasfu"]
+[ext_resource type="Texture2D" uid="uid://b5owh4xj5tvwk" path="res://ui/botoes/bt_A(Xbox).png" id="8_jlr0p"]
+[ext_resource type="Texture2D" uid="uid://ccbedb1b5ftpf" path="res://ui/botoes/bt_X(PS).png" id="9_r24pr"]
+[ext_resource type="Texture2D" uid="uid://tdi3c0n62s7h" path="res://ui/botoes/tc_W.png" id="10_a4qu8"]
+[ext_resource type="Texture2D" uid="uid://dn287tdandacw" path="res://ui/botoes/tc_A.png" id="11_jesfw"]
+[ext_resource type="Texture2D" uid="uid://48h2cjn4ayth" path="res://ui/botoes/tc_J.png" id="11_pov4f"]
+[ext_resource type="Texture2D" uid="uid://b1mh43pqyy5yt" path="res://ui/botoes/tc_S.png" id="12_r7875"]
+[ext_resource type="Texture2D" uid="uid://dh58ve6nhcsqn" path="res://ui/botoes/seta_DOWN.png" id="12_rfbjv"]
+[ext_resource type="Texture2D" uid="uid://b21ymhst2ie6a" path="res://ui/botoes/seta_LEFT.png" id="13_4oo62"]
+[ext_resource type="Texture2D" uid="uid://bg3efyi5kn52g" path="res://ui/botoes/tc_D.png" id="13_5mv0i"]
+[ext_resource type="Texture2D" uid="uid://cctjdtkowdllr" path="res://ui/botoes/seta_RIGHT.png" id="14_jmb13"]
+[ext_resource type="Texture2D" uid="uid://t7n3eh41iaj" path="res://ui/botoes/seta_UP.png" id="15_0cyl3"]
+[ext_resource type="Texture2D" uid="uid://ddk1rrlqd5b2" path="res://ui/botoes/tc_Z.png" id="16_bbswk"]
 
 [sub_resource type="Animation" id="Animation_urydl"]
 resource_name = "default"
@@ -128,7 +141,7 @@ offset_right = 284.0
 offset_bottom = -69.9994
 grow_vertical = 0
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="VoltarButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
@@ -196,6 +209,31 @@ label_settings = SubResource("LabelSettings_plftj")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TcW" type="Sprite2D" parent="VBoxContainer2/Teclado1"]
+position = Vector2(-80, 146)
+scale = Vector2(5, 5)
+texture = ExtResource("10_a4qu8")
+
+[node name="TcA" type="Sprite2D" parent="VBoxContainer2/Teclado1"]
+position = Vector2(-152, 226)
+scale = Vector2(5, 5)
+texture = ExtResource("11_jesfw")
+
+[node name="TcS" type="Sprite2D" parent="VBoxContainer2/Teclado1"]
+position = Vector2(-80, 226)
+scale = Vector2(5, 5)
+texture = ExtResource("12_r7875")
+
+[node name="TcD" type="Sprite2D" parent="VBoxContainer2/Teclado1"]
+position = Vector2(-8, 226)
+scale = Vector2(5, 5)
+texture = ExtResource("13_5mv0i")
+
+[node name="TcJ" type="Sprite2D" parent="VBoxContainer2/Teclado1"]
+position = Vector2(112, 146)
+scale = Vector2(5, 5)
+texture = ExtResource("11_pov4f")
+
 [node name="Teclado2" type="Panel" parent="VBoxContainer2"]
 layout_mode = 2
 
@@ -217,8 +255,48 @@ label_settings = SubResource("LabelSettings_tqbfx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SetaDown" type="Sprite2D" parent="VBoxContainer2/Teclado2"]
+position = Vector2(-55.9999, 218)
+scale = Vector2(5, 5)
+texture = ExtResource("12_rfbjv")
+
+[node name="SetaLeft" type="Sprite2D" parent="VBoxContainer2/Teclado2"]
+position = Vector2(-128, 218)
+scale = Vector2(5, 5)
+texture = ExtResource("13_4oo62")
+
+[node name="SetaRight" type="Sprite2D" parent="VBoxContainer2/Teclado2"]
+position = Vector2(16.0001, 218)
+scale = Vector2(5, 5)
+texture = ExtResource("14_jmb13")
+
+[node name="SetaUp" type="Sprite2D" parent="VBoxContainer2/Teclado2"]
+position = Vector2(-56.0001, 138)
+scale = Vector2(5, 5)
+texture = ExtResource("15_0cyl3")
+
+[node name="TcZ" type="Sprite2D" parent="VBoxContainer2/Teclado2"]
+position = Vector2(120, 138)
+scale = Vector2(5, 5)
+texture = ExtResource("16_bbswk")
+
 [node name="Controle" type="Panel" parent="VBoxContainer2"]
 layout_mode = 2
+
+[node name="JoyAll" type="Sprite2D" parent="VBoxContainer2/Controle"]
+position = Vector2(-78.9999, 212)
+scale = Vector2(6.10086, 6.10086)
+texture = ExtResource("7_fasfu")
+
+[node name="BtA(xbox)" type="Sprite2D" parent="VBoxContainer2/Controle"]
+position = Vector2(36.0001, 214)
+scale = Vector2(5, 5)
+texture = ExtResource("8_jlr0p")
+
+[node name="BtX(ps)" type="Sprite2D" parent="VBoxContainer2/Controle"]
+position = Vector2(145, 215)
+scale = Vector2(5, 5)
+texture = ExtResource("9_r24pr")
 
 [node name="Label3" type="Label" parent="VBoxContainer2/Controle"]
 layout_mode = 1
@@ -237,3 +315,5 @@ text = "Controle"
 label_settings = SubResource("LabelSettings_jei28")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/VoltarButton" to="." method="_on_voltar_button_pressed"]
