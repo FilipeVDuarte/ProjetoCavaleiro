@@ -29,7 +29,7 @@ func _process(delta:float):
 	# e o 02 significa que vamos passar dois numeros
 	time_elapsed_string = "%02d:%02d" % [minutes, seconds]
 	
-	cooldown_ritual = player.cooldown_ritual
+	#cooldown_ritual = player.cooldown_ritual
 		
 func end_game():
 	if is_game_over: return

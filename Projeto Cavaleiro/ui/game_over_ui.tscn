@@ -260,11 +260,13 @@ text = "Voltando em...
 label_settings = SubResource("LabelSettings_yofvj")
 horizontal_alignment = 1
 
-[node name="VariaGameOver" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VariaGameOver" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel_DeuPrati" type="Panel" parent="VariaGameOver"]
 layout_mode = 1
@@ -273,17 +275,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="DeuPrati" type="Label" parent="VariaGameOver/Panel_DeuPrati"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_DeuPrati"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -306,17 +308,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="JaEra" type="Label" parent="VariaGameOver/Panel_JaEra"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_JaEra"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -333,24 +335,23 @@ text = "Já era"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_TchauBenca" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 306.0
-offset_top = 120.0
-offset_right = 934.0
-offset_bottom = 240.0
+offset_left = -314.0
+offset_top = -241.0
+offset_right = 314.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="TchauBenca" type="Label" parent="VariaGameOver/Panel_TchauBenca"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_TchauBenca"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -367,24 +368,23 @@ text = "Tchau e bença"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_BahSeFoi" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="BahSeFoi" type="Label" parent="VariaGameOver/Panel_BahSeFoi"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_BahSeFoi"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -401,24 +401,23 @@ text = "Bah, se foi"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_Mane" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 329.0
-offset_top = 120.0
-offset_right = 911.0
-offset_bottom = 240.0
+offset_left = -291.0
+offset_top = -241.0
+offset_right = 291.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="Mane" type="Label" parent="VariaGameOver/Panel_Mane"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_Mane"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -435,24 +434,23 @@ text = "Perdeu, mané"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_FoiSaco" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="FoiSaco" type="Label" parent="VariaGameOver/Panel_FoiSaco"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_FoiSaco"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -469,24 +467,23 @@ text = "Foi pro saco"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_DeuCarai" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="DeuCarai" type="Label" parent="VariaGameOver/Panel_DeuCarai"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_DeuCarai"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -503,24 +500,23 @@ text = "Deu o carai"
 label_settings = SubResource("LabelSettings_xxqbg")
 
 [node name="Panel_Puts" type="Panel" parent="VariaGameOver"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 896.0
-offset_bottom = 240.0
+offset_left = -276.0
+offset_top = -241.0
+offset_right = 276.0
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_gsw6k")
 
-[node name="DeuCarai" type="Label" parent="VariaGameOver/Panel_Puts"]
+[node name="Label" type="Label" parent="VariaGameOver/Panel_Puts"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

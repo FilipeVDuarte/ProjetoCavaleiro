@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ko41rcnhbjkq"]
+[gd_scene load_steps=22 format=3 uid="uid://ko41rcnhbjkq"]
 
 [ext_resource type="Texture2D" uid="uid://cnfgolfp7eyry" path="res://ui/Titulo.png" id="1_0k8py"]
 [ext_resource type="Script" path="res://menus/menu_inicial.gd" id="1_dxw3p"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://d05e4yslyojnd" path="res://ui/Brilho 2.png" id="3_7dwlh"]
 [ext_resource type="Texture2D" uid="uid://cqhmkfr2lysf4" path="res://ui/Brilho 1.png" id="4_4vswt"]
 [ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="5_12dyd"]
+[ext_resource type="Texture2D" uid="uid://btvlkn8f6qtx1" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="7_4xi5c"]
+[ext_resource type="Texture2D" uid="uid://ctwkaed2q20ck" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="8_klajm"]
+[ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="8_u5w4m"]
+[ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="9_c2f3x"]
 
 [sub_resource type="Animation" id="Animation_urydl"]
 resource_name = "default"
@@ -80,7 +84,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(1.8, 2.6),
 "transitions": PackedFloat32Array(0.15, 0.15),
 "update": 0,
-"values": [Vector2(-500, 495), Vector2(59, 495)]
+"values": [Vector2(59, 800), Vector2(59, 430)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -95,8 +99,24 @@ tracks/6/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_y5dci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(59, 430)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_loqlc"]
 _data = {
+"RESET": SubResource("Animation_y5dci"),
 "default": SubResource("Animation_urydl")
 }
 
@@ -111,6 +131,38 @@ texture = ExtResource("3_7dwlh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t8m5"]
 texture = ExtResource("4_4vswt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4i84w"]
+texture = ExtResource("7_4xi5c")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkc7d"]
+texture = ExtResource("8_klajm")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv647"]
+texture = ExtResource("8_u5w4m")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0g5lk"]
+texture = ExtResource("9_c2f3x")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
 
 [node name="menu_inicial" type="Control"]
 layout_mode = 3
@@ -148,7 +200,7 @@ offset_left = 128.0
 offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(1.3098, 1.3098)
 
 [node name="Brilho 3" type="Panel" parent="Titulo"]
 layout_mode = 1
@@ -163,8 +215,8 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -6.28319
-scale = Vector2(3.354, 1.985)
+rotation = -0.29904
+scale = Vector2(14.9382, 8.84168)
 pivot_offset = Vector2(20, 20)
 theme_override_styles/panel = SubResource("StyleBoxTexture_d4jpg")
 
@@ -223,32 +275,50 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -500.0
-offset_top = -225.0
-offset_right = -275.0
-offset_bottom = -85.0
+offset_left = 59.0
+offset_top = -290.0
+offset_right = 284.0
+offset_bottom = -69.9995
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.329412, 0.411765, 0.717647, 1)
-theme_override_colors/font_pressed_color = Color(0.156863, 0.235294, 0.52549, 1)
-theme_override_colors/font_hover_color = Color(0.807843, 0.858824, 0.996078, 1)
-theme_override_constants/outline_size = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
 text = "Iniciar"
-flat = true
+icon_alignment = 1
+
+[node name="ComoJogarButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
+text = "Como jogar"
+icon_alignment = 1
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.329412, 0.411765, 0.717647, 1)
-theme_override_colors/font_pressed_color = Color(0.156863, 0.235294, 0.52549, 1)
-theme_override_colors/font_hover_color = Color(0.807843, 0.858824, 0.996078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("5_12dyd")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
 text = "Sair"
-flat = true
+icon_alignment = 1
 
 [node name="Background2" type="ColorRect" parent="."]
 visible = false
@@ -258,7 +328,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ComoJogarButton" to="." method="_on_como_jogar_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

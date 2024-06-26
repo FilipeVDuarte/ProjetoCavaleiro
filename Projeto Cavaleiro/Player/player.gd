@@ -9,8 +9,8 @@ extends CharacterBody2D
 
 @export_category("Ritual")
 @export var ritual_damage: int = 0
-@export var ritual_interval: float = 1.0
-@export var ritual_cooldown: float = 0.0
+@export var ritual_interval: float = 0.6
+@export var ritual_cooldown: float = 0.6
 @export var ritual_scene:  PackedScene = preload("res://misc/ritual.tscn")
 
 @export_category("Health")
@@ -46,6 +46,7 @@ signal quest_collected(value: int)
 func _ready():
 	GameManager.player = self
 	meat_collected.connect(func(value: int): GameManager.vida_counter += 1)
+	@warning_ignore("unused_parameter")
 	coin_collected.connect(func(value: int): GameManager.coin_counter += 1)
 	quest_collected.connect(func(value: int): GameManager.quest_counter += 1)
 
@@ -58,7 +59,6 @@ func _process(delta: float) -> void:
 	#Processar ataque
 	update_attack_cooldown(delta)
 	if Input.is_action_just_pressed("shoot"):
-		print("botao 1 ok")
 		attack()
 		
 	# Processar animação de andar e parado
@@ -70,13 +70,14 @@ func _process(delta: float) -> void:
 	update_hitbox_detection(delta)
 	
 	
-	update_ritual(delta)
-	#Ritual
-	if Input.is_action_just_pressed("shoot_b"):
-		if ritual_cooldown <= 0: return
-		else:
-			print("botao 2 ok")
-			ritual(delta)
+#	update_ritual(delta)
+#	#Ritual
+#	if Input.is_action_just_pressed("shoot_b"):
+#		if ritual_cooldown >= 0:
+#			return
+#		else:
+#			print("botao 2 ok")
+#			ritual(delta)
 			
 	
 	#Atualizar Barra de Vida
@@ -112,9 +113,9 @@ func update_ritual(delta: float) -> void:
 	#Resetar Temporizador
 	ritual_cooldown = ritual_interval
 	
-	
 func ritual(delta: float) -> void:
 	#Criar Ritual || instanciou e colou no player
+	@warning_ignore("shadowed_variable")
 	var ritual = ritual_scene.instantiate()
 	ritual_damage = ritual.damage_amount
 	add_child(ritual)

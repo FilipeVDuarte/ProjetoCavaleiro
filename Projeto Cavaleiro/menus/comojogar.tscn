@@ -1,0 +1,239 @@
+[gd_scene load_steps=17 format=3 uid="uid://bvxb4onqmw18b"]
+
+[ext_resource type="Script" path="res://menus/comojogar.gd" id="1_7o1uv"]
+[ext_resource type="Texture2D" uid="uid://btvlkn8f6qtx1" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="3_46ckh"]
+[ext_resource type="Texture2D" uid="uid://ctwkaed2q20ck" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="4_pvvrw"]
+[ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="5_5tryw"]
+[ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="6_bajqt"]
+[ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="6_lrw3v"]
+
+[sub_resource type="Animation" id="Animation_urydl"]
+resource_name = "default"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.8),
+"transitions": PackedFloat32Array(0.15, 0.15),
+"update": 0,
+"values": [Vector2(-500, 611.85), Vector2(59, 611)]
+}
+
+[sub_resource type="Animation" id="Animation_fovpx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-500, 611.85)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_loqlc"]
+_data = {
+"RESET": SubResource("Animation_fovpx"),
+"default": SubResource("Animation_urydl")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfgdu"]
+texture = ExtResource("3_46ckh")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8xd6h"]
+texture = ExtResource("4_pvvrw")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18tq7"]
+texture = ExtResource("5_5tryw")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fl26q"]
+texture = ExtResource("6_lrw3v")
+texture_margin_left = 23.0
+texture_margin_top = 15.0
+texture_margin_right = 23.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(6, 0, 179, 56)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jei28"]
+font = ExtResource("6_bajqt")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_plftj"]
+font = ExtResource("6_bajqt")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqbfx"]
+font = ExtResource("6_bajqt")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[node name="comojogar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7o1uv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_loqlc")
+}
+autoplay = "default"
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.952941, 0.65098, 0.0627451, 1)
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -109.0
+offset_right = 284.0
+offset_bottom = -69.9994
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_bajqt")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_rfgdu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8xd6h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_18tq7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fl26q")
+text = "Voltar"
+icon_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -258.0
+offset_right = -87.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Teclado"
+label_settings = SubResource("LabelSettings_jei28")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -186.0
+offset_right = 400.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(400, 19)
+theme_override_constants/separation = 400
+
+[node name="Teclado1" type="Panel" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/Teclado1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -11.5
+offset_right = 55.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Modo 1"
+label_settings = SubResource("LabelSettings_plftj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Teclado2" type="Panel" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2/Teclado2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -11.5
+offset_right = 36.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Modo 2"
+label_settings = SubResource("LabelSettings_tqbfx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controle" type="Panel" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer2/Controle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -11.5
+offset_right = 75.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Controle"
+label_settings = SubResource("LabelSettings_jei28")
+horizontal_alignment = 1
+vertical_alignment = 1
