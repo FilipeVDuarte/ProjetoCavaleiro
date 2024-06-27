@@ -11,6 +11,33 @@
 [ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="8_u5w4m"]
 [ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="9_c2f3x"]
 
+[sub_resource type="Animation" id="Animation_y5dci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(59, 430)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background2:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_urydl"]
 resource_name = "default"
 length = 15.0
@@ -96,22 +123,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0.1, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_y5dci"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(59, 430)]
+"values": [Color(0.141176, 0.141176, 0.141176, 1), Color(0.141176, 0.141176, 0.141176, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_loqlc"]
@@ -200,7 +212,7 @@ offset_left = 128.0
 offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.3098, 1.3098)
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Brilho 3" type="Panel" parent="Titulo"]
 layout_mode = 1
@@ -215,8 +227,8 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.29904
-scale = Vector2(14.9382, 8.84168)
+rotation = -6.28319
+scale = Vector2(3.354, 1.985)
 pivot_offset = Vector2(20, 20)
 theme_override_styles/panel = SubResource("StyleBoxTexture_d4jpg")
 
@@ -276,9 +288,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 59.0
-offset_top = -290.0
+offset_top = 80.0
 offset_right = 284.0
-offset_bottom = -69.9995
+offset_bottom = 300.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -321,14 +333,13 @@ text = "Sair"
 icon_alignment = 1
 
 [node name="Background2" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0.141176, 0.141176, 0.141176, 0.785714)
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ComoJogarButton" to="." method="_on_como_jogar_button_pressed"]

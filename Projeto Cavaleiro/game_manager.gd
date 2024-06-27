@@ -18,7 +18,7 @@ var cooldown_ritual: float = 0.0
 # Variável para verificar se a cena Level está rodando
 var is_level_running: bool = false
 
-func _process(delta:float):
+func _process(delta:float) -> void:
 	if is_level_running:
 		time_elapsed += delta
 		var time_elapsed_in_seconds: int = floori(time_elapsed)
@@ -35,12 +35,12 @@ func _process(delta:float):
 	
 	#cooldown_ritual = player.cooldown_ritual
 		
-func end_game():
+func end_game() -> void:
 	if is_game_over: return
 	is_game_over = true
 	game_over.emit()
 
-func reset():
+func reset() -> void:
 	player = null
 	player_position = Vector2.ZERO
 	is_game_over = false
@@ -52,11 +52,11 @@ func reset():
 	enemy_defeated_counter = 0
 	quest_counter = 0
 	
-	for connection in game_over.get_connections():
+	for connection: Dictionary in game_over.get_connections():
 		game_over.disconnect(connection.callable)
 
-func start_timer():
+func start_timer() -> void:
 	is_level_running = true
 
-func stop_timer():
+func stop_timer() -> void:
 	is_level_running = false
