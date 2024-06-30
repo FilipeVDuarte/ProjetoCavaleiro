@@ -1,4 +1,4 @@
-class_name Enemy
+class_name Enemy 
 extends Node2D
 
 @export_category("Vida")
@@ -80,7 +80,6 @@ func get_random_drop_item() -> PackedScene:
 	#@export var drop_chances: Array[float]
 	#Calcular Chance Máxima
 	var max_chances: float = 0.0
-	@warning_ignore("shadowed_variable", "shadowed_variable")
 	for drop_chance in drop_chances:
 		max_chances += drop_chance
 	

@@ -9,5 +9,4 @@ func on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		var player: Player = body
 		player.quest_collect(quest_amount)
-		player.quest_collected.emit(quest_amount)
 		queue_free()

@@ -1,6 +1,9 @@
 extends Node
 
+@onready var current_level: Level = get_tree().current_scene  # Obtém uma referência ao nó Level atual
+
 signal game_over
+signal all_objectives_collected
 
 var player: Player 
 var player_position: Vector2
@@ -12,11 +15,19 @@ var vida_counter:int = 0
 var coin_counter:int = 0
 var enemy_defeated_counter: int = 0
 var quest_counter: int = 0
+var total_quest: int = 0 
 var ritual_cooldown: float = 0.0
 var cooldown_ritual: float = 0.0
 
 # Variável para verificar se a cena Level está rodando
 var is_level_running: bool = false
+
+func _ready():
+	if current_level:
+		total_quest = current_level.total_quest_amount
+		print("Nessa fase tem um total de ", total_quest, " Objetivos")
+	else:
+		print("Nenhuma cena de Level encontrada!")
 
 func _process(delta:float) -> void:
 	if is_level_running:
@@ -60,3 +71,6 @@ func start_timer() -> void:
 
 func stop_timer() -> void:
 	is_level_running = false
+
+func on_objective_collected(amount: int) -> void:
+	quest_counter += amount

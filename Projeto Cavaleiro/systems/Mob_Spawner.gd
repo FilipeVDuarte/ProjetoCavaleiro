@@ -16,6 +16,9 @@ func _process(delta: float):
 	cooldown -= delta
 	if cooldown > 0: return
 	
+	# Se mob_per_minute for 0, não criar novos monstros
+	if mob_per_minute <= 0: return
+	
 	# Frequência: Monstro por minuto
 		# 60 Mob/min = 1 mob/seg
 		# 120 Mob/min = 2 mob/seg
@@ -31,7 +34,7 @@ func _process(delta: float):
 	var world_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()
 	parameters.position = point
-	parameters.collision_mask = 0b1001
+	parameters.collision_mask = 0b1000
 	var result:Array = world_state.intersect_point(parameters, 1)
 	if not result.is_empty(): return
 	
@@ -50,7 +53,6 @@ func get_point() -> Vector2:
 	# Random Float, retorna um valor aleatório dentre 0.0 e 1.0
 	path_follow_2d.progress_ratio = randf()
 	return path_follow_2d.global_position
-
 
 # .position é usado pra uma ocasião local
 # quando for necessário utilizar a posição em relação a cena, use global_position

@@ -242,6 +242,5 @@ func coin_collect(coin_amount:int) -> void:
 	print("jogador achou ", coin_amount, " total de ", item_cc)
 
 func quest_collect(quest_amount: int) -> void:
-	item_cc += quest_amount
-	#quest_collected.connect(func(value: int): GameManager.quest_counter += 1)
-	#print(GameManager.quest_counter)
+	item_qc += quest_amount
+	quest_collected.emit(quest_amount)

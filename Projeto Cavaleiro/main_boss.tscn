@@ -1,27 +1,27 @@
-[gd_scene load_steps=44 format=3 uid="uid://br7ahv7r5fn33"]
+[gd_scene load_steps=44 format=3 uid="uid://cs8ado4ih12h0"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_ug5al"]
-[ext_resource type="Texture2D" uid="uid://dexjk5ig5no80" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="1_yifut"]
-[ext_resource type="Texture2D" uid="uid://b72hpv1scb1ly" path="res://addons/Tiny Swords/Deco/01.png" id="2_2b6wb"]
-[ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="2_o58rk"]
-[ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_8dik4"]
-[ext_resource type="PackedScene" uid="uid://bsslek606dpxw" path="res://ui/game_UI.tscn" id="3_hxbb6"]
-[ext_resource type="Texture2D" uid="uid://c7f6817byu55m" path="res://addons/Tiny Swords/Deco/02.png" id="3_mfc8d"]
-[ext_resource type="Texture2D" uid="uid://5xj31m6h4inj" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="3_ph2xp"]
-[ext_resource type="Texture2D" uid="uid://bkiuec6qu6dbf" path="res://addons/Tiny Swords/Deco/03.png" id="4_slgbr"]
-[ext_resource type="Texture2D" uid="uid://b6lyid3ehw5ah" path="res://addons/Tiny Swords/Deco/04.png" id="5_qbr4s"]
-[ext_resource type="Texture2D" uid="uid://41wnfcgyqukq" path="res://addons/Tiny Swords/Deco/05.png" id="6_2r7jp"]
-[ext_resource type="Texture2D" uid="uid://budh13bfanye8" path="res://addons/Tiny Swords/Deco/06.png" id="7_n0f82"]
-[ext_resource type="Texture2D" uid="uid://d4brxac0rltnj" path="res://addons/Tiny Swords/Deco/07.png" id="8_ik7qv"]
-[ext_resource type="Texture2D" uid="uid://yfle76qhcct5" path="res://addons/Tiny Swords/Deco/08.png" id="9_ubayw"]
-[ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="10_615kb"]
-[ext_resource type="Texture2D" uid="uid://dddpctymgkvef" path="res://world/Terrains_Dirt_Grass_Sand_Cliffs.png" id="14_6tbw7"]
-[ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
-[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="14_nq1hb"]
-[ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="15_a2naq"]
-[ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="18_1vctn"]
-[ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="19_3p2h1"]
-[ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="20_mp3df"]
+[ext_resource type="Script" path="res://main.gd" id="1_k6arx"]
+[ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="2_g3ms4"]
+[ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_swt00"]
+[ext_resource type="Texture2D" uid="uid://dexjk5ig5no80" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_jjstw"]
+[ext_resource type="Texture2D" uid="uid://b72hpv1scb1ly" path="res://addons/Tiny Swords/Deco/01.png" id="5_lbc8s"]
+[ext_resource type="Texture2D" uid="uid://5xj31m6h4inj" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="6_nbnbg"]
+[ext_resource type="Texture2D" uid="uid://c7f6817byu55m" path="res://addons/Tiny Swords/Deco/02.png" id="7_d17gs"]
+[ext_resource type="Texture2D" uid="uid://bkiuec6qu6dbf" path="res://addons/Tiny Swords/Deco/03.png" id="8_np62s"]
+[ext_resource type="Texture2D" uid="uid://b6lyid3ehw5ah" path="res://addons/Tiny Swords/Deco/04.png" id="9_qnddi"]
+[ext_resource type="Texture2D" uid="uid://41wnfcgyqukq" path="res://addons/Tiny Swords/Deco/05.png" id="10_qskjx"]
+[ext_resource type="Texture2D" uid="uid://budh13bfanye8" path="res://addons/Tiny Swords/Deco/06.png" id="11_6n8jm"]
+[ext_resource type="Texture2D" uid="uid://d4brxac0rltnj" path="res://addons/Tiny Swords/Deco/07.png" id="12_8abg4"]
+[ext_resource type="Texture2D" uid="uid://yfle76qhcct5" path="res://addons/Tiny Swords/Deco/08.png" id="13_pt7st"]
+[ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="14_1frpd"]
+[ext_resource type="Texture2D" uid="uid://dddpctymgkvef" path="res://world/Terrains_Dirt_Grass_Sand_Cliffs.png" id="15_yqxwo"]
+[ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ltu0a"]
+[ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="17_r70fh"]
+[ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="18_c2nyf"]
+[ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_sp2mx"]
+[ext_resource type="PackedScene" uid="uid://bsslek606dpxw" path="res://ui/game_UI.tscn" id="20_8q1df"]
+[ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="21_n3mmu"]
+[ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="22_d2wgk"]
 
 [sub_resource type="Gradient" id="Gradient_ksj75"]
 offsets = PackedFloat32Array(0.00909091, 0.527273)
@@ -31,7 +31,7 @@ colors = PackedColorArray(0, 0.254902, 0.152941, 0, 0, 0.254902, 0.152941, 1)
 gradient = SubResource("Gradient_ksj75")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwq1m"]
-texture = ExtResource("1_yifut")
+texture = ExtResource("4_jjstw")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -69,52 +69,52 @@ texture_region_size = Vector2i(64, 64)
 8:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da3xo"]
-texture = ExtResource("2_2b6wb")
+texture = ExtResource("5_lbc8s")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtto1"]
-texture = ExtResource("3_ph2xp")
+texture = ExtResource("6_nbnbg")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yufes"]
-texture = ExtResource("3_mfc8d")
+texture = ExtResource("7_d17gs")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hagm"]
-texture = ExtResource("4_slgbr")
+texture = ExtResource("8_np62s")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4q3t"]
-texture = ExtResource("5_qbr4s")
+texture = ExtResource("9_qnddi")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ls766"]
-texture = ExtResource("6_2r7jp")
+texture = ExtResource("10_qskjx")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ldogr"]
-texture = ExtResource("7_n0f82")
+texture = ExtResource("11_6n8jm")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1shir"]
-texture = ExtResource("8_ik7qv")
+texture = ExtResource("12_8abg4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_si5k5"]
-texture = ExtResource("9_ubayw")
+texture = ExtResource("13_pt7st")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f27hx"]
-texture = ExtResource("10_615kb")
+texture = ExtResource("14_1frpd")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
@@ -133,7 +133,7 @@ sources/9 = SubResource("TileSetAtlasSource_f27hx")
 sources/10 = SubResource("TileSetAtlasSource_vtto1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gc02w"]
-texture = ExtResource("14_6tbw7")
+texture = ExtResource("15_yqxwo")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1251,10 +1251,10 @@ height = 1464.03
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
 y_sort_enabled = true
-script = ExtResource("1_ug5al")
+script = ExtResource("1_k6arx")
 game_ui = NodePath("Game UI")
-game_over_ui_template = ExtResource("19_3p2h1")
-boss_scene = ExtResource("3_8dik4")
+game_over_ui_template = ExtResource("2_g3ms4")
+boss_scene = ExtResource("3_swt00")
 
 [node name="Node" type="Node" parent="."]
 
@@ -1389,7 +1389,7 @@ rotation = -1.14988
 shape = SubResource("CapsuleShape2D_oynk7")
 debug_color = Color(0.790877, 0.0869514, 1, 0.42)
 
-[node name="Player" parent="." instance=ExtResource("14_nq1hb")]
+[node name="Player" parent="." instance=ExtResource("16_ltu0a")]
 position = Vector2(615, 331)
 scale = Vector2(2.5, 2.5)
 ritual_interval = 10.0
@@ -1406,496 +1406,498 @@ update_rotation = false
 update_scale = false
 
 [node name="Difficulty_System" type="Node" parent="." node_paths=PackedStringArray("mob_spawner")]
-script = ExtResource("14_artqg")
+process_mode = 4
+script = ExtResource("17_r70fh")
 mob_spawner = NodePath("../MobSpawner")
 
-[node name="MobSpawner" parent="." instance=ExtResource("2_o58rk")]
+[node name="MobSpawner" parent="." instance=ExtResource("18_c2nyf")]
+process_mode = 4
 position = Vector2(5, 0)
 scale = Vector2(1.02439, 1.00891)
 
 [node name="Arvores" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Arvore" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-679, -1338)
 
-[node name="Arvore2" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore2" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-798, -1362)
 
-[node name="Arvore3" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore3" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-912, -1335)
 
-[node name="Arvore4" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore4" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1036, -1352)
 
-[node name="Arvore137" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore137" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2969, -1347)
 
-[node name="Arvore138" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore138" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2855, -1320)
 
-[node name="Arvore139" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore139" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2731, -1337)
 
-[node name="Arvore141" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore141" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2639, -1313)
 
-[node name="Arvore142" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore142" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2515, -1330)
 
-[node name="Arvore143" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore143" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2441, -1304)
 
-[node name="Arvore144" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore144" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2317, -1321)
 
-[node name="Arvore145" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore145" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2246, -1302)
 
-[node name="Arvore146" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore146" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2122, -1319)
 
-[node name="Arvore147" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore147" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2010, -1302)
 
-[node name="Arvore148" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore148" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1886, -1319)
 
-[node name="Arvore149" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore149" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1803, -1302)
 
-[node name="Arvore150" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore150" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1679, -1319)
 
-[node name="Arvore151" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore151" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1567, -1300)
 
-[node name="Arvore152" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore152" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1443, -1317)
 
-[node name="Arvore153" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore153" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1336, -1293)
 
-[node name="Arvore154" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore154" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1212, -1310)
 
-[node name="Arvore155" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore155" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1120, -1277)
 
-[node name="Arvore156" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore156" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(996, -1294)
 
-[node name="Arvore157" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore157" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(909, -1266)
 
-[node name="Arvore158" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore158" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(832, -1314)
 
-[node name="Arvore5" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore5" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1130, -1325)
 
-[node name="Arvore6" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore6" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1182, -1360)
 
-[node name="Arvore7" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore7" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1296, -1333)
 
-[node name="Arvore8" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore8" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1420, -1350)
 
-[node name="Arvore9" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore9" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1514, -1323)
 
-[node name="Arvore10" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore10" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1571, -1354)
 
-[node name="Arvore11" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore11" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1685, -1327)
 
-[node name="Arvore12" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore12" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1809, -1344)
 
-[node name="Arvore13" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore13" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1903, -1317)
 
-[node name="Arvore14" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore14" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1939, -1364)
 
-[node name="Arvore15" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore15" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2053, -1337)
 
-[node name="Arvore16" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore16" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2177, -1354)
 
-[node name="Arvore17" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore17" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2271, -1327)
 
-[node name="Arvore56" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore56" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1839, 1885)
 
-[node name="Arvore57" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore57" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1953, 1912)
 
-[node name="Arvore58" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore58" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2077, 1895)
 
-[node name="Arvore59" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore59" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2171, 1922)
 
-[node name="Arvore60" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore60" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1412, 1888)
 
-[node name="Arvore61" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore61" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1526, 1915)
 
-[node name="Arvore62" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore62" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1650, 1898)
 
-[node name="Arvore63" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore63" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1744, 1925)
 
-[node name="Arvore64" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore64" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1014, 1888)
 
-[node name="Arvore65" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore65" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1128, 1915)
 
-[node name="Arvore66" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore66" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1252, 1898)
 
-[node name="Arvore67" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore67" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-1346, 1925)
 
-[node name="Arvore68" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore68" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-611, 1888)
 
-[node name="Arvore69" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore69" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-725, 1915)
 
-[node name="Arvore70" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore70" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-849, 1898)
 
-[node name="Arvore71" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore71" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-943, 1925)
 
-[node name="Arvore72" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore72" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-168, 1883)
 
-[node name="Arvore73" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore73" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-282, 1910)
 
-[node name="Arvore74" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore74" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-406, 1893)
 
-[node name="Arvore75" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore75" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-500, 1920)
 
-[node name="Arvore76" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore76" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(246, 1899)
 
-[node name="Arvore77" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore77" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(132, 1926)
 
-[node name="Arvore78" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore78" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(8, 1909)
 
-[node name="Arvore79" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore79" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-86, 1936)
 
-[node name="Arvore80" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore80" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(644, 1899)
 
-[node name="Arvore81" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore81" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(530, 1926)
 
-[node name="Arvore82" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore82" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(406, 1909)
 
-[node name="Arvore83" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore83" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(312, 1936)
 
-[node name="Arvore84" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore84" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1052, 1904)
 
-[node name="Arvore85" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore85" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(938, 1931)
 
-[node name="Arvore86" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore86" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(814, 1914)
 
-[node name="Arvore87" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore87" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(720, 1941)
 
-[node name="Arvore88" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore88" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1442, 1907)
 
-[node name="Arvore89" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore89" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1328, 1934)
 
-[node name="Arvore90" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore90" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1204, 1917)
 
-[node name="Arvore91" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore91" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1110, 1944)
 
-[node name="Arvore92" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore92" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1869, 1904)
 
-[node name="Arvore93" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore93" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1755, 1931)
 
-[node name="Arvore94" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore94" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1631, 1914)
 
-[node name="Arvore95" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore95" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1537, 1941)
 
-[node name="Arvore96" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore96" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2227, 1899)
 
-[node name="Arvore97" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore97" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2113, 1926)
 
-[node name="Arvore98" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore98" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1989, 1909)
 
-[node name="Arvore99" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore99" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(1895, 1936)
 
-[node name="Arvore100" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore100" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2497, 1923)
 
-[node name="Arvore101" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore101" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2383, 1950)
 
-[node name="Arvore102" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore102" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2259, 1933)
 
-[node name="Arvore103" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore103" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(2165, 1960)
 
-[node name="Arvore18" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore18" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2188, -1259)
 
-[node name="Arvore19" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore19" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2264, -1183)
 
-[node name="Arvore20" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore20" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2183, -1099)
 
-[node name="Arvore21" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore21" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2259, -1023)
 
-[node name="Arvore22" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore22" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2180, -926)
 
-[node name="Arvore23" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore23" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2256, -850)
 
-[node name="Arvore24" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore24" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2170, -764)
 
-[node name="Arvore25" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore25" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2246, -688)
 
-[node name="Arvore26" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore26" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2167, -600)
 
-[node name="Arvore27" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore27" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2243, -524)
 
-[node name="Arvore28" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore28" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2159, -440)
 
-[node name="Arvore29" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore29" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2235, -364)
 
-[node name="Arvore30" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore30" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2151, -267)
 
-[node name="Arvore31" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore31" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2227, -191)
 
-[node name="Arvore32" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore32" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2154, -74)
 
-[node name="Arvore33" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore33" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2230, 2)
 
-[node name="Arvore34" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore34" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2144, 131)
 
-[node name="Arvore35" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore35" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2220, 207)
 
-[node name="Arvore36" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore36" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2150, 310)
 
-[node name="Arvore37" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore37" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2226, 386)
 
-[node name="Arvore38" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore38" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2144, 515)
 
-[node name="Arvore39" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore39" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2220, 591)
 
-[node name="Arvore40" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore40" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2139, 690)
 
-[node name="Arvore41" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore41" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2215, 766)
 
-[node name="Arvore42" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore42" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2139, 868)
 
-[node name="Arvore43" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore43" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2215, 944)
 
-[node name="Arvore44" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore44" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2139, 1066)
 
-[node name="Arvore45" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore45" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2215, 1142)
 
-[node name="Arvore46" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore46" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2137, 1234)
 
-[node name="Arvore47" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore47" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2213, 1310)
 
-[node name="Arvore48" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore48" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2134, 1421)
 
-[node name="Arvore49" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore49" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2210, 1497)
 
-[node name="Arvore50" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore50" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2148, 1588)
 
-[node name="Arvore51" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore51" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2224, 1664)
 
-[node name="Arvore52" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore52" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2148, 1766)
 
-[node name="Arvore53" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore53" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2224, 1842)
 
-[node name="Arvore54" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore54" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2148, 1766)
 
-[node name="Arvore55" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore55" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(-2224, 1842)
 
-[node name="Arvore104" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore104" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3157, 1004)
 
-[node name="Arvore105" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore105" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3081, 1080)
 
-[node name="Arvore106" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore106" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3157, 1182)
 
-[node name="Arvore107" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore107" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3081, 1258)
 
-[node name="Arvore108" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore108" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3151, 685)
 
-[node name="Arvore109" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore109" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3075, 761)
 
-[node name="Arvore110" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore110" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3151, 863)
 
-[node name="Arvore111" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore111" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3075, 939)
 
-[node name="Arvore112" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore112" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3140, 366)
 
-[node name="Arvore113" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore113" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3064, 442)
 
-[node name="Arvore114" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore114" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3140, 544)
 
-[node name="Arvore115" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore115" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3064, 620)
 
-[node name="Arvore116" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore116" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3129, 30)
 
-[node name="Arvore117" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore117" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3053, 106)
 
-[node name="Arvore118" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore118" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3129, 208)
 
-[node name="Arvore119" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore119" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3053, 284)
 
-[node name="Arvore120" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore120" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3129, -308)
 
-[node name="Arvore121" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore121" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3053, -232)
 
-[node name="Arvore122" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore122" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3129, -130)
 
-[node name="Arvore123" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore123" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3053, -54)
 
-[node name="Arvore124" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore124" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3121, -653)
 
-[node name="Arvore125" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore125" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3045, -577)
 
-[node name="Arvore126" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore126" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3121, -475)
 
-[node name="Arvore127" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore127" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3045, -399)
 
-[node name="Arvore128" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore128" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3132, -1044)
 
-[node name="Arvore129" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore129" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3056, -968)
 
-[node name="Arvore130" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore130" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3132, -866)
 
-[node name="Arvore131" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore131" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3056, -790)
 
-[node name="Arvore132" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore132" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3124, -1355)
 
-[node name="Arvore133" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore133" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3048, -1279)
 
-[node name="Arvore134" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore134" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3124, -1177)
 
-[node name="Arvore135" parent="Arvores" instance=ExtResource("18_1vctn")]
+[node name="Arvore135" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3048, -1101)
 
-[node name="Game UI" parent="." instance=ExtResource("3_hxbb6")]
+[node name="Game UI" parent="." instance=ExtResource("20_8q1df")]
 
-[node name="Quest" parent="." instance=ExtResource("20_mp3df")]
+[node name="Quest" parent="." instance=ExtResource("21_n3mmu")]
 position = Vector2(957, -1178)
 
-[node name="Quest2" parent="." instance=ExtResource("20_mp3df")]
+[node name="Quest2" parent="." instance=ExtResource("21_n3mmu")]
 position = Vector2(2208, 1667)
 
-[node name="Quest3" parent="." instance=ExtResource("20_mp3df")]
+[node name="Quest3" parent="." instance=ExtResource("21_n3mmu")]
 position = Vector2(-1926, 1623)
 
-[node name="Quest4" parent="." instance=ExtResource("20_mp3df")]
+[node name="Quest4" parent="." instance=ExtResource("21_n3mmu")]
 position = Vector2(-1939, -1139)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1904,4 +1906,8 @@ scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
-[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("15_a2naq")]
+[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("22_d2wgk")]
+
+[node name="Capiguara" parent="." instance=ExtResource("3_swt00")]
+position = Vector2(1065, 383)
+scale = Vector2(2, 2)
