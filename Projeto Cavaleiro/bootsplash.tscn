@@ -37,7 +37,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -61,7 +61,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer/Label:label_settings:outline_color")
+tracks/3/path = NodePath("CenterContainer/VBoxContainer/Label:label_settings:outline_color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -73,7 +73,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("VBoxContainer/Label:label_settings:shadow_color")
+tracks/4/path = NodePath("CenterContainer/VBoxContainer/Label:label_settings:shadow_color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -101,7 +101,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -125,7 +125,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer/Label:label_settings:outline_color")
+tracks/3/path = NodePath("CenterContainer/VBoxContainer/Label:label_settings:outline_color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -137,7 +137,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("VBoxContainer/Label:label_settings:shadow_color")
+tracks/4/path = NodePath("CenterContainer/VBoxContainer/Label:label_settings:shadow_color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -183,32 +183,27 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_x2iu1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-modulate = Color(1, 1, 1, 0)
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -106.5
-offset_top = -87.5
-offset_right = 106.5
-offset_bottom = 87.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.30147, 1.30147)
-pivot_offset = Vector2(106, 87)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 theme_override_constants/separation = -20
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "pipo"
 label_settings = SubResource("LabelSettings_5vr5k")
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "produções"
 label_settings = SubResource("LabelSettings_66lnt")

@@ -6,11 +6,15 @@ extends Node2D
 # Adiciona uma variável para a cena do boss específica desta fase
 @export var boss_scene: PackedScene  
 @export var total_quest_amount: int = 4  # Número total de objetivos a serem coletados nesta fase
+@onready var is_level_with_quests: bool = true
 
 func _ready():
 	GameManager.game_over.connect(trigger_game_over)
 	GameManager.start_timer() # Inicia a contagem do tempo
+	GameManager.total_quest = total_quest_amount  # Atualiza o total de quests no GameManager
 	
+func get_total_quest_amount() -> int:
+	return total_quest_amount
 
 func _process(delta) -> void:
 	if GameManager.quest_counter >= total_quest_amount:
@@ -29,9 +33,3 @@ func trigger_game_over():
 	#Criar Game Over UI
 	var game_over_ui: GameOverUI = game_over_ui_template.instantiate()
 	add_child(game_over_ui)
-
-# func trigger_boss_level() -> void:
-#	if GameManager.quest_counter:
-#		GameManager.quest_counter = total_quest_amount
-#		print("trigger boss")
-#		get_tree().change_scene_to_file("res://menus/menu_inicial.tscn")

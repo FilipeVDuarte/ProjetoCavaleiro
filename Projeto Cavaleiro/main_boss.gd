@@ -3,8 +3,7 @@ extends Node2D
 
 @export var game_ui: CanvasLayer
 @export var game_over_ui_template: PackedScene
-# Adiciona uma variável para a cena do boss específica desta fase 
-@export var total_quest_amount: int = 4  # Número total de objetivos a serem coletados nesta fase
+var is_level_with_quests: bool = false
 
 func _ready():
 	GameManager.game_over.connect(trigger_game_over)

@@ -10,10 +10,10 @@ var player: Player
 var player_position: Vector2
 var is_game_over: bool = false
 
-var time_elapsed:float = 0.0
+var time_elapsed: float = 0.0
 var time_elapsed_string: String
-var vida_counter:int = 0
-var coin_counter:int = 0
+var vida_counter: int = 0
+var coin_counter: int = 0
 var enemy_defeated_counter: int = 0
 var quest_counter: int = 0
 var total_quest: int = 0 
@@ -24,15 +24,15 @@ var cooldown_ritual: float = 0.0
 var is_level_running: bool = false
 
 func _ready():
-	# Verificar se a cena atual é do tipo Level que possui quests
-	if current_scene and current_scene.has_method("get_total_quest_amount"):
+	# Verificar se a cena atual é um nível com quests
+	if current_scene and current_scene.has_method("is_level_with_quests") and current_scene.is_level_with_quests:
 		total_quest = current_scene.get_total_quest_amount()
 		print("Nessa fase tem um total de ", total_quest, " Objetivos")
 	else:
 		total_quest = 0
 		print("Nenhuma cena de Level encontrada ou a cena não possui objetivos!")
 
-func _process(delta:float) -> void:
+func _process(delta: float) -> void:
 	if is_level_running:
 		time_elapsed += delta
 		var time_elapsed_in_seconds: int = floori(time_elapsed)
