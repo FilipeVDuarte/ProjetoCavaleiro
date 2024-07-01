@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
 size = Vector2(65, 70)
 
-[node name="Capiguara" type="CharacterBody2D" groups=["enemies"]]
+[node name="Capiguara" type="CharacterBody2D" groups=["boss", "enemies"]]
 motion_mode = 1
 script = ExtResource("1_l6yap")
 health = 50

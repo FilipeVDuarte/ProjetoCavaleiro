@@ -1,6 +1,7 @@
 extends Node
 
-@onready var current_level: Level = get_tree().current_scene  # Obtém uma referência ao nó Level atual
+# Obtém uma referência ao nó Level atual
+@onready var current_scene = get_tree().current_scene
 
 signal game_over
 signal all_objectives_collected
@@ -23,11 +24,13 @@ var cooldown_ritual: float = 0.0
 var is_level_running: bool = false
 
 func _ready():
-	if current_level:
-		total_quest = current_level.total_quest_amount
+	# Verificar se a cena atual é do tipo Level que possui quests
+	if current_scene and current_scene.has_method("get_total_quest_amount"):
+		total_quest = current_scene.get_total_quest_amount()
 		print("Nessa fase tem um total de ", total_quest, " Objetivos")
 	else:
-		print("Nenhuma cena de Level encontrada!")
+		total_quest = 0
+		print("Nenhuma cena de Level encontrada ou a cena não possui objetivos!")
 
 func _process(delta:float) -> void:
 	if is_level_running:

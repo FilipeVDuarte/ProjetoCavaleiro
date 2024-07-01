@@ -201,8 +201,12 @@ func update_hitbox_detection(delta: float) -> void:
 	for body in bodies:
 		if body.is_in_group("enemies"):
 			var _enemy: Enemy = body
-			var damage_amount = 1
-			damage_to_player(damage_amount)
+			var damage_recebido_amount = 1
+			damage_to_player(damage_recebido_amount)
+		if body.is_in_group("boss"):
+			var _enemy: Enemy = body
+			var damage_recebido_amount = 1
+			damage_to_player(damage_recebido_amount)
 
 func damage_to_player(amount: int) -> void:
 	if health <= 0: return

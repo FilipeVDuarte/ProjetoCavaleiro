@@ -1,7 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://cs8ado4ih12h0"]
+[gd_scene load_steps=43 format=3 uid="uid://cs8ado4ih12h0"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_k6arx"]
-[ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="2_g3ms4"]
+[ext_resource type="Script" path="res://main_boss.gd" id="1_qo7p8"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_swt00"]
 [ext_resource type="Texture2D" uid="uid://dexjk5ig5no80" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="4_jjstw"]
 [ext_resource type="Texture2D" uid="uid://b72hpv1scb1ly" path="res://addons/Tiny Swords/Deco/01.png" id="5_lbc8s"]
@@ -18,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ltu0a"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="17_r70fh"]
 [ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="18_c2nyf"]
+[ext_resource type="PackedScene" uid="uid://d3f0f6wpgf321" path="res://ui/game_UI_boss.tscn" id="18_g8r2x"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_sp2mx"]
-[ext_resource type="PackedScene" uid="uid://bsslek606dpxw" path="res://ui/game_UI.tscn" id="20_8q1df"]
 [ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="21_n3mmu"]
 [ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="22_d2wgk"]
 
@@ -1249,12 +1248,9 @@ height = 1464.03
 radius = 294.822
 height = 1464.03
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
+[node name="Main_Boss" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_k6arx")
-game_ui = NodePath("Game UI")
-game_over_ui_template = ExtResource("2_g3ms4")
-boss_scene = ExtResource("3_swt00")
+script = ExtResource("1_qo7p8")
 
 [node name="Node" type="Node" parent="."]
 
@@ -1886,7 +1882,7 @@ position = Vector2(3124, -1177)
 [node name="Arvore135" parent="Arvores" instance=ExtResource("19_sp2mx")]
 position = Vector2(3048, -1101)
 
-[node name="Game UI" parent="." instance=ExtResource("20_8q1df")]
+[node name="Game UI Boss" parent="." instance=ExtResource("18_g8r2x")]
 
 [node name="Quest" parent="." instance=ExtResource("21_n3mmu")]
 position = Vector2(957, -1178)
@@ -1909,5 +1905,5 @@ scale = Vector2(2, 2)
 [node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("22_d2wgk")]
 
 [node name="Capiguara" parent="." instance=ExtResource("3_swt00")]
-position = Vector2(1065, 383)
+position = Vector2(1422, 164)
 scale = Vector2(2, 2)
