@@ -14,7 +14,7 @@ var time_elapsed: float = 0.0
 var time_elapsed_string: String
 var vida_counter: int = 0
 var coin_counter: int = 0
-var enemy_defeated_counter: int = 0
+var enemy_defeated_counter: int = 49
 var quest_counter: int = 0
 var total_quest: int = 0 
 var ritual_cooldown: float = 0.0

@@ -5,7 +5,7 @@ extends CanvasLayer
 #@onready var vida_label:Label = %LabelVida
 #@onready var moeda_label:Label = %LabelMoedas
 @onready var quest_label:Label = %LabelQuest
-@onready var cooldown_ritual:ProgressBar = %CooldownRitual
+#@onready var cooldown_ritual:ProgressBar = %CooldownRitual
 #@onready var quest_total_label:Label = %LabelQuest_total
 
 func _process(_delta: float):

@@ -1,0 +1,364 @@
+[gd_scene load_steps=18 format=3 uid="uid://wvf8l5ss6jjx"]
+
+[ext_resource type="Script" path="res://ui/game_UI_level2.gd" id="1_hlrjo"]
+[ext_resource type="Texture2D" uid="uid://bhip5qssmo0tv" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_cdh71"]
+[ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="3_bfx7l"]
+[ext_resource type="Texture2D" uid="uid://bmbm3sr2p71ut" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="4_gg3ei"]
+[ext_resource type="Texture2D" uid="uid://dbp5kq7bvenhn" path="res://addons/Tiny Swords/Resources/Resources/Real_(NoShadow).png" id="5_qbvnv"]
+[ext_resource type="Texture2D" uid="uid://1f426ivdgorj" path="res://misc/Dead.png" id="6_8hwfb"]
+[ext_resource type="Texture2D" uid="uid://d2qlj8nnqrb15" path="res://collectables/Quest_Icon.png" id="6_dnt3i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ji0l"]
+texture = ExtResource("2_cdh71")
+texture_margin_left = 32.0
+texture_margin_top = 18.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+modulate_color = Color(0.445333, 1, 0.36, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ltay6"]
+font = ExtResource("3_bfx7l")
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da3tq"]
+atlas = ExtResource("4_gg3ei")
+region = Rect2(40, 56, 56, 40)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5c1m"]
+texture = ExtResource("2_cdh71")
+texture_margin_left = 32.0
+texture_margin_top = 18.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpra6"]
+atlas = ExtResource("5_qbvnv")
+region = Rect2(48, 64, 48, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sv10y"]
+font = ExtResource("3_bfx7l")
+font_size = 30
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2443h"]
+texture = ExtResource("2_cdh71")
+texture_margin_left = 32.0
+texture_margin_top = 18.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+modulate_color = Color(0.6, 0.0431373, 0.996078, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vq3iw"]
+texture = ExtResource("2_cdh71")
+texture_margin_left = 32.0
+texture_margin_top = 18.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+modulate_color = Color(0.133333, 0.278431, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6kad"]
+atlas = ExtResource("6_dnt3i")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxklu"]
+atlas = ExtResource("6_8hwfb")
+region = Rect2(302, 187, 40, 38)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_hlrjo")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = 61.0
+offset_right = -45.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel_Vidas" type="Panel" parent="ReferenceRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 39.0
+offset_right = -69.0
+offset_bottom = 147.0
+grow_horizontal = 0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5ji0l")
+
+[node name="LabelVida" type="Label" parent="ReferenceRect/Panel_Vidas"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.5
+offset_top = -21.0
+offset_right = 62.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "0
+"
+label_settings = SubResource("LabelSettings_ltay6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ReferenceRect/Panel_Vidas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -22.0
+offset_right = 4.5
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.735596, 0.735596)
+texture = SubResource("AtlasTexture_da3tq")
+
+[node name="Panel_Moedas" type="Panel" parent="ReferenceRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -262.0
+offset_right = -52.0
+offset_bottom = 78.0
+grow_horizontal = 0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/panel = SubResource("StyleBoxTexture_m5c1m")
+
+[node name="TextureRect2" type="TextureRect" parent="ReferenceRect/Panel_Moedas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -33.0
+offset_right = 4.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.735596, 0.735596)
+texture = SubResource("AtlasTexture_wpra6")
+
+[node name="LabelMoedas" type="Label" parent="ReferenceRect/Panel_Moedas"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -30.0
+offset_right = 39.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_sv10y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel_Tempo" type="Panel" parent="ReferenceRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -145.0
+offset_right = 87.0
+offset_bottom = 91.0
+grow_horizontal = 2
+scale = Vector2(1.25, 1.25)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2443h")
+
+[node name="LabelTempo" type="Label" parent="ReferenceRect/Panel_Tempo"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -28.5
+offset_right = 70.0
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "00:15
+"
+label_settings = SubResource("LabelSettings_ltay6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel_Quest" type="Panel" parent="ReferenceRect"]
+visible = false
+layout_mode = 1
+offset_left = 37.0
+offset_top = 83.0
+offset_right = 210.0
+offset_bottom = 182.0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/panel = SubResource("StyleBoxTexture_vq3iw")
+
+[node name="TextureRect2" type="TextureRect" parent="ReferenceRect/Panel_Quest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.1
+offset_top = -33.5
+offset_right = 7.9
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_t6kad")
+
+[node name="LabelQuest" type="Label" parent="ReferenceRect/Panel_Quest"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.4
+offset_top = -29.5
+offset_right = 5.6
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_sv10y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelQuestBarra" type="Label" parent="ReferenceRect/Panel_Quest"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.6
+offset_top = -29.5
+offset_right = 26.6
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "/"
+label_settings = SubResource("LabelSettings_sv10y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelQuest_total" type="Label" parent="ReferenceRect/Panel_Quest"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.6
+offset_top = -29.5
+offset_right = 63.6
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "2"
+label_settings = SubResource("LabelSettings_sv10y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel_Quest2" type="Panel" parent="ReferenceRect"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = -1.0
+offset_right = 222.0
+offset_bottom = 98.0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/panel = SubResource("StyleBoxTexture_vq3iw")
+
+[node name="TextureRect2" type="TextureRect" parent="ReferenceRect/Panel_Quest2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 36.8
+offset_top = -32.7
+offset_right = 100.8
+offset_bottom = 31.3
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_pxklu")
+
+[node name="LabelECounter" type="Label" parent="ReferenceRect/Panel_Quest2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.60001
+offset_top = -28.7
+offset_right = 3.39999
+offset_bottom = 2.3
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "500"
+label_settings = SubResource("LabelSettings_sv10y")
+autowrap_mode = 2

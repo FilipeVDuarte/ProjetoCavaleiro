@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cs8ado4ih12h0"]
+[gd_scene load_steps=41 format=3 uid="uid://cs8ado4ih12h0"]
 
 [ext_resource type="Script" path="res://main_boss.gd" id="1_qo7p8"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_swt00"]
@@ -15,8 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://qx77eqp3n2df" path="res://addons/Tiny Swords/Deco/09.png" id="14_1frpd"]
 [ext_resource type="Texture2D" uid="uid://dddpctymgkvef" path="res://world/Terrains_Dirt_Grass_Sand_Cliffs.png" id="15_yqxwo"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ltu0a"]
-[ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="17_r70fh"]
-[ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="18_c2nyf"]
 [ext_resource type="PackedScene" uid="uid://d3f0f6wpgf321" path="res://ui/game_UI_boss.tscn" id="18_g8r2x"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_sp2mx"]
 [ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="21_n3mmu"]
@@ -1397,19 +1395,8 @@ update_scale = false
 
 [node name="RemoteTransform2D - MobSpawner" type="RemoteTransform2D" parent="Player"]
 position = Vector2(-244, -132.4)
-remote_path = NodePath("../../MobSpawner")
 update_rotation = false
 update_scale = false
-
-[node name="Difficulty_System" type="Node" parent="." node_paths=PackedStringArray("mob_spawner")]
-process_mode = 4
-script = ExtResource("17_r70fh")
-mob_spawner = NodePath("../MobSpawner")
-
-[node name="MobSpawner" parent="." instance=ExtResource("18_c2nyf")]
-process_mode = 4
-position = Vector2(5, 0)
-scale = Vector2(1.02439, 1.00891)
 
 [node name="Arvores" type="Node2D" parent="."]
 y_sort_enabled = true
