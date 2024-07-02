@@ -6,7 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/FilipeVDuarte/ProjetoCavaleiro)
 ![GitHub License](https://img.shields.io/github/license/FilipeVDuarte/ProjetoCavaleiro)
 
-[<iframe frameborder="0" src="https://itch.io/embed/2421287" width="552" height="167"><a href="https://pipoodid.itch.io/cavaleiro-de-latao">Cavaleiro de Latão by Filipe Duarte CL Dev</a></iframe>](https://itch.io/embed-upload/10756023?color=F3A610)
+[Link para Jogar](https://pipoodid.itch.io/cavaleiro-de-latao)
 
 # Projeto Cavaleiro
 > Aqui está uma fração do meu Projeto de conclusão de curso. Onde eu desenvolvo um jogo que irá contar a história autoral.
