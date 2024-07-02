@@ -6,11 +6,11 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/FilipeVDuarte/ProjetoCavaleiro)
 ![GitHub License](https://img.shields.io/github/license/FilipeVDuarte/ProjetoCavaleiro)
 
-[Link para Jogar](https://pipoodid.itch.io/cavaleiro-de-latao)
+[Link para Jogar](https://itch.io/embed-upload/10756023?color=F3A610)
 
-https://itch.io/embed-upload/10756023?color=F3A610
 
-<iframe src="https://itch.io/embed-upload/10756023?color=F3A610" allowfullscreen="" width="640" height="380"><a href="https://pipoodid.itch.io/cavaleiro-de-latao">Play Cavaleiro de Latão on itch.io</a></iframe>
+
+<iframe src="https://itch.io/embed-upload/10756023?color=F3A610" width="640" height="380"><a href="https://pipoodid.itch.io/cavaleiro-de-latao">Play Cavaleiro de Latão on itch.io</a></iframe>
 
 # Projeto Cavaleiro
 > Aqui está uma fração do meu Projeto de conclusão de curso. Onde eu desenvolvo um jogo que irá contar a história autoral.
