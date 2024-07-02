@@ -8,6 +8,8 @@
 
 [Link para Jogar](https://pipoodid.itch.io/cavaleiro-de-latao)
 
+https://itch.io/embed-upload/10756023?color=F3A610
+
 # Projeto Cavaleiro
 > Aqui está uma fração do meu Projeto de conclusão de curso. Onde eu desenvolvo um jogo que irá contar a história autoral.
 
