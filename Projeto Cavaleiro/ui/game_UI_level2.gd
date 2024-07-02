@@ -22,6 +22,6 @@ func _process(_delta: float):
 	
 	#Condicional para quest
 	panel_quest.visible = false
-	if enemy_counter_label.text == str(50):
+	if enemy_counter_label.text >= str(30):
 		panel_quest.visible = true
 	

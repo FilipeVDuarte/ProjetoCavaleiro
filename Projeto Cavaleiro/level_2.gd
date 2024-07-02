@@ -5,7 +5,7 @@ extends Node2D
 @export var game_over_ui_template: PackedScene
 # Adiciona uma variável para a cena do boss específica desta fase
 @export var boss_scene: PackedScene  
-@export var total_quest_amount: int = 4  # Número total de objetivos a serem coletados nesta fase
+@export var total_quest_amount: int = 3  # Número total de objetivos a serem coletados nesta fase
 
 @onready var is_level_with_quests: bool = true
 @onready var quests_group:Node2D = $Quests
@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		get_tree().change_scene_to_file("res://level2_boss.tscn")
 
 	quests_group.visible = false
-	if GameManager.enemy_defeated_counter == 50:
+	if GameManager.enemy_defeated_counter >= 30:
 		quests_group.visible = true
 
 func _exit_tree():

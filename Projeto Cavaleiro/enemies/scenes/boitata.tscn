@@ -1,27 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://yerww5qdawwl"]
+[gd_scene load_steps=8 format=3 uid="uid://yerww5qdawwl"]
 
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_1xi15"]
 [ext_resource type="PackedScene" uid="uid://cjstm6kgk56mb" path="res://misc/skull.tscn" id="2_kkpef"]
 [ext_resource type="Texture2D" uid="uid://bvonce6no2gex" path="res://enemies/textures/boitata.png" id="3_ch0jv"]
+[ext_resource type="PackedScene" uid="uid://b7t74r0t1w0qm" path="res://collectables/meat.tscn" id="3_mysa1"]
 [ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_0og28"]
+[ext_resource type="PackedScene" uid="uid://cb1l2tlca7l7r" path="res://collectables/pumpkin.tscn" id="4_epsxb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
-size = Vector2(84, 90)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xyrro"]
+radius = 24.6667
+height = 61.3333
 
 [node name="Boitata" type="CharacterBody2D" groups=["enemies"]]
 scale = Vector2(1.5, 1.5)
 motion_mode = 1
 script = ExtResource("1_1xi15")
 death_prefab = ExtResource("2_kkpef")
+drop_itens = Array[PackedScene]([ExtResource("3_mysa1"), ExtResource("4_epsxb")])
+drop_chances = Array[float]([0.8, 0.8])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -32)
 texture = ExtResource("3_ch0jv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(5, -45)
-shape = SubResource("RectangleShape2D_n66ak")
+position = Vector2(2.66667, -30)
+shape = SubResource("CapsuleShape2D_xyrro")
 
 [node name="FollowPlayer" type="Node" parent="."]
 script = ExtResource("4_0og28")
