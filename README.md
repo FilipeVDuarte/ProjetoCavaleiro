@@ -1,5 +1,4 @@
-# Projeto Cavaleiro
-
+<img src="splashart.png" alt="Splash Art do jogo">
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/FilipeVDuarte/ProjetoCavaleiro)
 ![GitHub Game Engine](https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat)
@@ -7,8 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/FilipeVDuarte/ProjetoCavaleiro)
 ![GitHub License](https://img.shields.io/github/license/FilipeVDuarte/ProjetoCavaleiro)
 
-<img src="splashart.png" alt="Splash Art do jogo">
-
+# Projeto Cavaleiro
 > Aqui está uma fração do meu Projeto de conclusão de curso. Onde eu desenvolvo um jogo que irá contar a história autoral.
 
 ### Propostos e Inclusos
