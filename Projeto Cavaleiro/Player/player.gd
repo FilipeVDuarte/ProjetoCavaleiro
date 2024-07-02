@@ -28,6 +28,7 @@ extends CharacterBody2D
 @onready var slash: Sprite2D = $Slash
 @onready var hitbox_area: Area2D = $HitboxArea
 @onready var health_progress_bar: ProgressBar = $HealthProgressBar
+@onready var current_scene = get_tree().current_scene
 
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false
@@ -69,6 +70,9 @@ func _process(delta: float) -> void:
 	#Processar dano
 	update_hitbox_detection(delta)
 	
+	if current_scene:
+		current_scene = Level2
+		damage = 5
 	
 #	update_ritual(delta)
 #	#Ritual
@@ -205,7 +209,7 @@ func update_hitbox_detection(delta: float) -> void:
 			damage_to_player(damage_recebido_amount)
 		if body.is_in_group("boss"):
 			var _enemy: Enemy = body
-			var damage_recebido_amount = 1
+			var damage_recebido_amount = 4
 			damage_to_player(damage_recebido_amount)
 
 func damage_to_player(amount: int) -> void:
