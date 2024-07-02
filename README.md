@@ -7,8 +7,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/FilipeVDuarte/ProjetoCavaleiro)
 ![GitHub License](https://img.shields.io/github/license/FilipeVDuarte/ProjetoCavaleiro)
 
-
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="splashart.png" alt="Splash Art do jogo">
 
 > Aqui está uma fração do meu Projeto de conclusão de curso. Onde eu desenvolvo um jogo que irá contar a história autoral.
 
