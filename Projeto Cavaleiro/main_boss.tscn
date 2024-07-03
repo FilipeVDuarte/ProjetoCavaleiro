@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cs8ado4ih12h0"]
+[gd_scene load_steps=40 format=3 uid="uid://cs8ado4ih12h0"]
 
 [ext_resource type="Script" path="res://main_boss.gd" id="1_qo7p8"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_swt00"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ltu0a"]
 [ext_resource type="PackedScene" uid="uid://d3f0f6wpgf321" path="res://ui/game_UI_boss.tscn" id="18_g8r2x"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_sp2mx"]
-[ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="21_n3mmu"]
 [ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="22_d2wgk"]
 
 [sub_resource type="Gradient" id="Gradient_ksj75"]
@@ -1870,18 +1869,6 @@ position = Vector2(3124, -1177)
 position = Vector2(3048, -1101)
 
 [node name="Game UI Boss" parent="." instance=ExtResource("18_g8r2x")]
-
-[node name="Quest" parent="." instance=ExtResource("21_n3mmu")]
-position = Vector2(957, -1178)
-
-[node name="Quest2" parent="." instance=ExtResource("21_n3mmu")]
-position = Vector2(2208, 1667)
-
-[node name="Quest3" parent="." instance=ExtResource("21_n3mmu")]
-position = Vector2(-1926, 1623)
-
-[node name="Quest4" parent="." instance=ExtResource("21_n3mmu")]
-position = Vector2(-1939, -1139)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(615, 331)

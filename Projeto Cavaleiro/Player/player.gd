@@ -71,7 +71,7 @@ func _process(delta: float) -> void:
 	update_hitbox_detection(delta)
 	
 	if current_scene:
-		current_scene = Level2
+		current_scene = "res://level_2.tscn"
 		damage = 5
 	
 #	update_ritual(delta)
