@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cs8ado4ih12h0"]
+[gd_scene load_steps=41 format=3 uid="uid://cs8ado4ih12h0"]
 
 [ext_resource type="Script" path="res://main_boss.gd" id="1_qo7p8"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_swt00"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dddpctymgkvef" path="res://world/Terrains_Dirt_Grass_Sand_Cliffs.png" id="15_yqxwo"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ltu0a"]
 [ext_resource type="PackedScene" uid="uid://d3f0f6wpgf321" path="res://ui/game_UI_boss.tscn" id="18_g8r2x"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="19_8wq5d"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_sp2mx"]
 [ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="22_d2wgk"]
 
@@ -1881,3 +1882,5 @@ scale = Vector2(2, 2)
 [node name="Capiguara" parent="." instance=ExtResource("3_swt00")]
 position = Vector2(1422, 164)
 scale = Vector2(2, 2)
+
+[node name="scene_transition" parent="." instance=ExtResource("19_8wq5d")]

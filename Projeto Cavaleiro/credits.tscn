@@ -1,0 +1,131 @@
+[gd_scene load_steps=9 format=3 uid="uid://b06j1md2a22cg"]
+
+[ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="1_nc3qb"]
+[ext_resource type="Script" path="res://credits.gd" id="1_rhwsp"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="3_itp3h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dbs8q"]
+line_spacing = -5.0
+font = ExtResource("1_nc3qb")
+font_size = 90
+font_color = Color(1, 0.583333, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_14san"]
+line_spacing = -5.0
+font = ExtResource("1_nc3qb")
+font_size = 90
+
+[sub_resource type="Animation" id="Animation_x36wx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/Label4:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.583333, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgh7t"]
+resource_name = "default"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/Label4:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.3, 2.5, 2.7, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.7, 4.9, 5.1, 5.3, 5.5, 5.7, 5.9, 6.1, 6.3, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0.583333, 0, 1), Color(1, 0.866667, 0, 1), Color(0.0666666, 1, 0, 1), Color(0, 1, 1, 1), Color(0, 0.183333, 1, 1), Color(0.4, 0, 1, 1), Color(0.916667, 0, 1, 1), Color(1, 0, 0.566667, 1), Color(1, 0, 0, 1), Color(1, 0.583333, 0, 1), Color(1, 0.866667, 0, 1), Color(0.0666666, 1, 0, 1), Color(0, 1, 1, 1), Color(0, 0.183333, 1, 1), Color(0.4, 0, 1, 1), Color(0.916667, 0, 1, 1), Color(1, 0, 0.566667, 1), Color(1, 0, 0, 1), Color(1, 0.583333, 0, 1), Color(1, 0.866667, 0, 1), Color(0.0666666, 1, 0, 1), Color(0, 1, 1, 1), Color(0, 0.183333, 1, 1), Color(0.4, 0, 1, 1), Color(0.916667, 0, 1, 1), Color(1, 0, 0.566667, 1), Color(1, 0, 0, 1), Color(1, 0.583333, 0, 1), Color(1, 0.866667, 0, 1), Color(0.0666666, 1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5, 5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byycl"]
+_data = {
+"RESET": SubResource("Animation_x36wx"),
+"default": SubResource("Animation_tgh7t")
+}
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rhwsp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Obrigado por jogar!
+"
+label_settings = SubResource("LabelSettings_dbs8q")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "nos vemos nas próximas
+atualizações"
+label_settings = SubResource("LabelSettings_14san")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_byycl")
+}
+autoplay = "default"
+
+[node name="scene_transition" parent="." instance=ExtResource("3_itp3h")]

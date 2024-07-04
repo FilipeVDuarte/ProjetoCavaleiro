@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ko41rcnhbjkq"]
+[gd_scene load_steps=23 format=3 uid="uid://ko41rcnhbjkq"]
 
 [ext_resource type="Texture2D" uid="uid://cnfgolfp7eyry" path="res://ui/Titulo.png" id="1_0k8py"]
 [ext_resource type="Script" path="res://menus/menu_inicial.gd" id="1_dxw3p"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ctwkaed2q20ck" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="8_klajm"]
 [ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="8_u5w4m"]
 [ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="9_c2f3x"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="11_nmwlw"]
 
 [sub_resource type="Animation" id="Animation_y5dci"]
 length = 0.001
@@ -185,6 +186,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dxw3p")
 
+[node name="scene_transition" parent="." instance=ExtResource("11_nmwlw")]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
 libraries = {
@@ -339,7 +342,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.141176, 0.141176, 0.141176, 0.785714)
+color = Color(0.141176, 0.141176, 0.141176, 1)
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ComoJogarButton" to="." method="_on_como_jogar_button_pressed"]

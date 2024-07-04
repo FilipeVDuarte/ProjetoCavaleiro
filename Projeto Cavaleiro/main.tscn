@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://br7ahv7r5fn33"]
+[gd_scene load_steps=21 format=3 uid="uid://br7ahv7r5fn33"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ug5al"]
 [ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="2_o58rk"]
 [ext_resource type="PackedScene" uid="uid://cj2nqdddufyjm" path="res://enemies/scenes/capiguara.tscn" id="3_8dik4"]
 [ext_resource type="PackedScene" uid="uid://bsslek606dpxw" path="res://ui/game_UI.tscn" id="3_hxbb6"]
 [ext_resource type="TileSet" uid="uid://dkerbqsjbd5l" path="res://deco_tileset.tres" id="4_3l2pc"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="13_tbrtq"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="14_artqg"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="14_nq1hb"]
 [ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="15_a2naq"]
@@ -694,3 +695,5 @@ scale = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("15_a2naq")]
+
+[node name="scene_transition" parent="." instance=ExtResource("13_tbrtq")]

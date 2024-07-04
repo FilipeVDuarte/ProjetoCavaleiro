@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bgqr0ie23scng"]
+[gd_scene load_steps=24 format=3 uid="uid://bgqr0ie23scng"]
 
 [ext_resource type="Script" path="res://level_2.gd" id="1_hjx4u"]
 [ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="2_g7ahm"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="15_yovit"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="16_ov6s4"]
 [ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="17_y5jwx"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="17_yf7s4"]
 [ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="18_5e4rs"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="19_5or71"]
 [ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="21_bfked"]
@@ -123,14 +124,12 @@ debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="WorldLimit"]
 position = Vector2(-1476, 1846)
 rotation = 0.575959
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_psnca")
 debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="WorldLimit"]
 position = Vector2(-1468, -1162)
 rotation = -0.575959
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_psnca")
 debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 
@@ -443,3 +442,5 @@ scale = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("22_hptnx")]
+
+[node name="scene_transition" parent="." instance=ExtResource("17_yf7s4")]

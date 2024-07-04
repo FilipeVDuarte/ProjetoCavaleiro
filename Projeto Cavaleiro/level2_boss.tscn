@@ -1,20 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://xioj0tmt1ngj"]
+[gd_scene load_steps=16 format=3 uid="uid://xioj0tmt1ngj"]
 
-[ext_resource type="Script" path="res://level_2.gd" id="1_qx3dq"]
-[ext_resource type="PackedScene" uid="uid://p0hrhueppdns" path="res://ui/game_over_ui.tscn" id="2_hhdmq"]
+[ext_resource type="Script" path="res://level2_boss.gd" id="1_uqiry"]
 [ext_resource type="PackedScene" uid="uid://mqm43f68ov35" path="res://enemies/scenes/dragao_latao.tscn" id="3_5scds"]
 [ext_resource type="TileSet" uid="uid://dpnlaxnmgryn4" path="res://map_tileset.tres" id="4_ma76h"]
 [ext_resource type="TileSet" uid="uid://dkerbqsjbd5l" path="res://deco_tileset.tres" id="5_2cgbt"]
 [ext_resource type="PackedScene" uid="uid://cytvyxkffphc7" path="res://Player/player.tscn" id="6_cg7w0"]
-[ext_resource type="Script" path="res://systems/Difficulty_system.gd" id="7_fli88"]
-[ext_resource type="PackedScene" uid="uid://b38xtuh46sxag" path="res://systems/mob_spawner.tscn" id="8_7j2ab"]
-[ext_resource type="PackedScene" uid="uid://yerww5qdawwl" path="res://enemies/scenes/boitata.tscn" id="9_np40f"]
-[ext_resource type="PackedScene" uid="uid://bcufqdcsg87lc" path="res://enemies/scenes/cuca.tscn" id="10_w486p"]
-[ext_resource type="PackedScene" uid="uid://bok6nl77qmr2c" path="res://enemies/scenes/mula.tscn" id="11_4akx5"]
+[ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="9_b4bip"]
 [ext_resource type="PackedScene" uid="uid://wvf8l5ss6jjx" path="res://ui/game_UI_level2.tscn" id="12_0rmr6"]
 [ext_resource type="PackedScene" uid="uid://co3fhu1h8tpuo" path="res://world/arvore.tscn" id="13_7lfpl"]
-[ext_resource type="PackedScene" uid="uid://c8haj6tflarh8" path="res://collectables/quest.tscn" id="14_w5nni"]
-[ext_resource type="PackedScene" uid="uid://cnel06jh8ahlu" path="res://ui/indicador_ui.tscn" id="15_itrun"]
 [ext_resource type="PackedScene" uid="uid://b5q3hs8q0sph3" path="res://menus/pause_menu.tscn" id="16_qy0dx"]
 
 [sub_resource type="Gradient" id="Gradient_ksj75"]
@@ -36,12 +29,9 @@ size = Vector2(7669, 1529)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqesg"]
 size = Vector2(7588.05, 1647.84)
 
-[node name="Level 2" type="Node2D" node_paths=PackedStringArray("game_ui")]
+[node name="Level 2" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_qx3dq")
-game_ui = NodePath("Game UI")
-game_over_ui_template = ExtResource("2_hhdmq")
-boss_scene = ExtResource("3_5scds")
+script = ExtResource("1_uqiry")
 
 [node name="Node" type="Node2D" parent="."]
 z_index = 10
@@ -123,14 +113,12 @@ debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="WorldLimit"]
 position = Vector2(-1476, 1846)
 rotation = 0.575959
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_psnca")
 debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="WorldLimit"]
 position = Vector2(-1468, -1162)
 rotation = -0.575959
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_psnca")
 debug_color = Color(1, 0.301961, 0.568627, 0.847059)
 
@@ -158,21 +146,8 @@ update_scale = false
 
 [node name="RemoteTransform2D - MobSpawner" type="RemoteTransform2D" parent="Player"]
 position = Vector2(-244, -132.4)
-remote_path = NodePath("../../MobSpawner")
 update_rotation = false
 update_scale = false
-
-[node name="Difficulty_System" type="Node" parent="." node_paths=PackedStringArray("mob_spawner")]
-script = ExtResource("7_fli88")
-mob_spawner = NodePath("../MobSpawner")
-initial_spawn_rate = 30.0
-spawn_rate_per_minute = 5.0
-wave_duraction = 40.0
-break_intensity = 0.8
-
-[node name="MobSpawner" parent="." instance=ExtResource("8_7j2ab")]
-position = Vector2(5, 0)
-creatures = Array[PackedScene]([ExtResource("9_np40f"), ExtResource("10_w486p"), ExtResource("11_4akx5")])
 
 [node name="Game UI" parent="." instance=ExtResource("12_0rmr6")]
 
@@ -419,23 +394,6 @@ position = Vector2(-360, 2019)
 [node name="Arvore80" parent="Arvores" instance=ExtResource("13_7lfpl")]
 position = Vector2(-163, 2055)
 
-[node name="Quests" type="Node2D" parent="."]
-
-[node name="Quest" parent="Quests" instance=ExtResource("14_w5nni")]
-position = Vector2(1977, 1052)
-
-[node name="Indicador UI2" parent="Quests/Quest" instance=ExtResource("15_itrun")]
-
-[node name="Quest2" parent="Quests" instance=ExtResource("14_w5nni")]
-position = Vector2(-1151, 1272)
-
-[node name="Indicador UI3" parent="Quests/Quest2" instance=ExtResource("15_itrun")]
-
-[node name="Quest3" parent="Quests" instance=ExtResource("14_w5nni")]
-position = Vector2(3050, -1240)
-
-[node name="Indicador UI" parent="Quests/Quest3" instance=ExtResource("15_itrun")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(615, 331)
 scale = Vector2(2, 2)
@@ -443,3 +401,10 @@ scale = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("16_qy0dx")]
+
+[node name="DragaoLatao" parent="." instance=ExtResource("3_5scds")]
+unique_name_in_owner = true
+position = Vector2(1087, 356)
+health = 100
+
+[node name="scene_transition" parent="." instance=ExtResource("9_b4bip")]

@@ -9,8 +9,12 @@ extends Node2D
 
 @onready var is_level_with_quests: bool = true
 @onready var quests_group:Node2D = $Quests
+@onready var SceneTransitionAnimation = $scene_transition/AnimationPlayer
 
 func _ready():
+	GameManager.enemy_defeated_counter = 0
+	SceneTransitionAnimation.get_parent().get_node("ColorRect").color.a = 255
+	SceneTransitionAnimation.play("fade_out")
 	GameManager.game_over.connect(trigger_game_over)
 	GameManager.start_timer() # Inicia a contagem do tempo
 	GameManager.total_quest = total_quest_amount  # Atualiza o total de quests no GameManager
@@ -20,7 +24,8 @@ func get_total_quest_amount() -> int:
 
 func _process(delta) -> void:
 	if GameManager.quest_counter >= total_quest_amount:
-		print("trigger boss")
+		SceneTransitionAnimation.play("fade_in")
+		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://level2_boss.tscn")
 
 	quests_group.visible = false

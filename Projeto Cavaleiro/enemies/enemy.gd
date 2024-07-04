@@ -76,8 +76,7 @@ func get_random_drop_item() -> PackedScene:
 	if drop_itens.size() == 1:
 		return drop_itens[0]
 	
-	#@export var drop_itens: Array[PackedScene]
-	#@export var drop_chances: Array[float]
+
 	#Calcular Chance Máxima
 	var max_chances: float = 0.0
 	for drop_chance in drop_chances:
