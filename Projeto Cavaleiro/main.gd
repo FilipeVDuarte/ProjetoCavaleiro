@@ -24,6 +24,7 @@ func _process(_delta) -> void:
 	if GameManager.quest_counter >= total_quest_amount:
 		SceneTransitionAnimation.play("fade_in")
 		await get_tree().create_timer(0.5).timeout
+		GameManager.reset_quest()
 		get_tree().change_scene_to_file("res://main_boss.tscn")
 		
 func _exit_tree():

@@ -431,7 +431,7 @@ position = Vector2(-1151, 1272)
 [node name="Indicador UI3" parent="Quests/Quest2" instance=ExtResource("15_yovit")]
 
 [node name="Quest3" parent="Quests" instance=ExtResource("21_bfked")]
-position = Vector2(3050, -1240)
+position = Vector2(-930, -727)
 
 [node name="Indicador UI" parent="Quests/Quest3" instance=ExtResource("15_yovit")]
 

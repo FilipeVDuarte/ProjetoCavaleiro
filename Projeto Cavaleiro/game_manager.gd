@@ -54,6 +54,10 @@ func end_game() -> void:
 	is_game_over = true
 	game_over.emit()
 
+func reset_quest() -> void:
+	quest_counter = 0
+	total_quest = 0 
+
 func reset() -> void:
 	player = null
 	player_position = Vector2.ZERO
@@ -65,6 +69,7 @@ func reset() -> void:
 	coin_counter = 0
 	enemy_defeated_counter = 0
 	quest_counter = 0
+	total_quest = 0
 	
 	for connection: Dictionary in game_over.get_connections():
 		game_over.disconnect(connection.callable)
