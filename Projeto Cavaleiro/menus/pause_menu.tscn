@@ -108,15 +108,9 @@ texture_margin_right = 23.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(6, 0, 179, 56)
 
-[node name="Pause_Menu" type="Control"]
+[node name="Pause_Menu" type="CanvasLayer"]
 process_mode = 3
 visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_lddm3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -125,7 +119,6 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -134,7 +127,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -143,7 +135,7 @@ anchor_bottom = 0.5
 offset_left = 503.0
 offset_top = 241.0
 offset_right = 776.0
-offset_bottom = 479.0
+offset_bottom = 473.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1

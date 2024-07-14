@@ -688,12 +688,10 @@ position = Vector2(-1926, 1623)
 [node name="Quest4" parent="." instance=ExtResource("20_mp3df")]
 position = Vector2(-1939, -1139)
 
+[node name="scene_transition" parent="." instance=ExtResource("13_tbrtq")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(615, 331)
 scale = Vector2(2, 2)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("15_a2naq")]
-
-[node name="scene_transition" parent="." instance=ExtResource("13_tbrtq")]
+[node name="Pause_Menu" parent="Camera2D" instance=ExtResource("15_a2naq")]
