@@ -17,7 +17,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/path = NodePath("CanvasLayer/VBoxContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -105,7 +105,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("VBoxContainer:position")
+tracks/5/path = NodePath("CanvasLayer/VBoxContainer:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -145,7 +145,7 @@ texture = ExtResource("3_7dwlh")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t8m5"]
 texture = ExtResource("4_4vswt")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4i84w"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nch6"]
 texture = ExtResource("7_4xi5c")
 texture_margin_left = 23.0
 texture_margin_top = 15.0
@@ -153,7 +153,7 @@ texture_margin_right = 23.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(6, 0, 179, 56)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkc7d"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gto8f"]
 texture = ExtResource("8_klajm")
 texture_margin_left = 23.0
 texture_margin_top = 15.0
@@ -161,7 +161,7 @@ texture_margin_right = 23.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(6, 0, 179, 56)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv647"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aycgj"]
 texture = ExtResource("8_u5w4m")
 texture_margin_left = 23.0
 texture_margin_top = 15.0
@@ -169,7 +169,7 @@ texture_margin_right = 23.0
 texture_margin_bottom = 15.0
 region_rect = Rect2(6, 0, 179, 56)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0g5lk"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3nqp"]
 texture = ExtResource("9_c2f3x")
 texture_margin_left = 23.0
 texture_margin_top = 15.0
@@ -285,57 +285,8 @@ grow_vertical = 2
 pivot_offset = Vector2(48, 31)
 theme_override_styles/panel = SubResource("StyleBoxTexture_0t8m5")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 59.0
-offset_top = 80.0
-offset_right = 284.0
-offset_bottom = 300.0
-grow_vertical = 0
-
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
-theme_override_fonts/font = ExtResource("5_12dyd")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
-theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
-text = "Iniciar"
-icon_alignment = 1
-
-[node name="ComoJogarButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("5_12dyd")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
-theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
-text = "Como jogar"
-icon_alignment = 1
-
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("5_12dyd")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_4i84w")
-theme_override_styles/hover = SubResource("StyleBoxTexture_fkc7d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uv647")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_0g5lk")
-text = "Sair"
-icon_alignment = 1
-
 [node name="Background2" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -344,6 +295,61 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.141176, 0.141176, 0.141176, 1)
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ComoJogarButton" to="." method="_on_como_jogar_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+z_as_relative = false
+y_sort_enabled = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 43.0
+offset_right = 299.0
+offset_bottom = 300.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+text = "Iniciar"
+icon_alignment = 1
+
+[node name="ComoJogarButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+text = "Como Jogar"
+icon_alignment = 1
+
+[node name="SairButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_12dyd")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+text = "Sair"
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ComoJogarButton" to="." method="_on_como_jogar_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/SairButton" to="." method="_on_sair_button_pressed"]

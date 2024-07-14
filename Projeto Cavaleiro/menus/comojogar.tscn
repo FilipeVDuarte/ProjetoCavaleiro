@@ -37,7 +37,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_urydl"]
 resource_name = "default"
-length = 15.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -138,7 +138,7 @@ anchor_bottom = 1.0
 offset_left = 59.0
 offset_top = -109.0
 offset_right = 284.0
-offset_bottom = -69.9994
+offset_bottom = -19.0
 grow_vertical = 0
 
 [node name="VoltarButton" type="Button" parent="VBoxContainer"]
