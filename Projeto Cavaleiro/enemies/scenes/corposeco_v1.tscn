@@ -13,7 +13,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
 size = Vector2(26, 35)
 
-[node name="CorpoSeco" type="CharacterBody2D" groups=["enemies"]]
+[node name="CorpoSeco" type="CharacterBody2D" groups=["enemies_n1"]]
 motion_mode = 1
 script = ExtResource("1_cbw0v")
 health = 5

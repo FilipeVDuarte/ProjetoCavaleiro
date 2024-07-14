@@ -1,6 +1,7 @@
 class_name Enemy 
 extends Node2D
 
+
 @export_category("Vida")
 @export var health: int = 10
 @export var death_prefab: PackedScene
@@ -43,10 +44,10 @@ func damage(amount: int) -> void:
 	if health <= 0:
 		die()
 
-func _on_enemy_damaged(amount: int) -> void:
+#func _on_enemy_damaged(amount: int) -> void:
 	# Aqui você pode adicionar qualquer lógica
 	# que precisa ser executada quando o inimigo é danificado
-	print("Sinal de dano recebido com valor: ", amount)
+#	print("Sinal de dano recebido com valor: ", amount)
 
 func die() -> void:
 	#Caveira
@@ -68,7 +69,6 @@ func drop_item() -> void:
 	var drop = get_random_drop_item().instantiate()
 	drop.position = position
 	get_parent().add_child(drop)
-
 
 func get_random_drop_item() -> PackedScene:
 	#Listas com 1 item

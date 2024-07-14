@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cytvyxkffphc7"]
+[gd_scene load_steps=18 format=3 uid="uid://cytvyxkffphc7"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_4v2w6"]
 [ext_resource type="Texture2D" uid="uid://d30vexk5hff6f" path="res://Player/Ficino_base.png" id="2_hl0fq"]
 [ext_resource type="Texture2D" uid="uid://ce7w7mpvowkfd" path="res://Player/slash.png" id="2_qi6jb"]
+[ext_resource type="AudioStream" uid="uid://ccpbb2m8di64c" path="res://music/attack.wav" id="4_gm3fn"]
+[ext_resource type="AudioStream" uid="uid://dhc0tsu883nvc" path="res://music/hurt.wav" id="5_pg5lg"]
+[ext_resource type="AudioStream" uid="uid://cb2o7b45640ec" path="res://music/death1.wav" id="6_65rfd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s17r7"]
 radius = 7.5
@@ -129,6 +132,21 @@ tracks/3/keys = {
 "method": &"deal_damage_to_enemies"
 }]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Audio_Attack")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_gm3fn")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_mk0mr"]
 resource_name = "walk"
@@ -150,7 +168,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_b15uy"]
 resource_name = "walk_escudo"
 length = 0.4
-loop_mode = 2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -189,6 +207,21 @@ tracks/2/keys = {
 "method": &"deal_damage_to_enemies"
 }]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Audio_Attack")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_gm3fn")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k2cdl"]
 _data = {
@@ -270,3 +303,15 @@ theme_override_styles/background = SubResource("StyleBoxFlat_dhd8x")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ob6k7")
 step = 1.0
 show_percentage = false
+
+[node name="Audio_Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pg5lg")
+volume_db = -10.0
+
+[node name="Audio_Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_65rfd")
+volume_db = -10.0
+
+[node name="Audio_Attack" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+autoplay = true

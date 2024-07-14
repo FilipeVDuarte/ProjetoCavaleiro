@@ -1,6 +1,5 @@
 extends Control
 
-
 func _ready():
 	# Referência ao AnimationPlayer
 	var animation_player = $AnimationPlayer

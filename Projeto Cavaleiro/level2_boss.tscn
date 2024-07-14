@@ -405,6 +405,5 @@ scale = Vector2(2, 2)
 [node name="DragaoLatao" parent="." instance=ExtResource("3_5scds")]
 unique_name_in_owner = true
 position = Vector2(1087, 356)
-health = 100
 
 [node name="scene_transition" parent="." instance=ExtResource("9_b4bip")]

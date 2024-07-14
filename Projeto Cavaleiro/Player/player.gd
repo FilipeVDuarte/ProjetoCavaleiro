@@ -14,8 +14,8 @@ extends CharacterBody2D
 @export var ritual_scene:  PackedScene = preload("res://misc/ritual.tscn")
 
 @export_category("Health")
-@export var health: int = 100
-@export var max_health: int = 100
+@export var health: int = 50
+@export var max_health: int = 50
 @export var death_prefab: PackedScene = preload("res://misc/big_skull.tscn" )
 
 @export_category("Itens")
@@ -205,11 +205,23 @@ func update_hitbox_detection(delta: float) -> void:
 	for body in bodies:
 		if body.is_in_group("enemies"):
 			var _enemy: Enemy = body
-			var damage_recebido_amount = 1
+			var damage_recebido_amount = 2
 			damage_to_player(damage_recebido_amount)
-		if body.is_in_group("boss"):
+		if body.is_in_group("enemies_n1"):
+			var _enemy: Enemy = body
+			var damage_recebido_amount = 2
+			damage_to_player(damage_recebido_amount)
+		if body.is_in_group("enemies_n2"):
 			var _enemy: Enemy = body
 			var damage_recebido_amount = 4
+			damage_to_player(damage_recebido_amount)
+		if body.is_in_group("enemies_n3"):
+			var _enemy: Enemy = body
+			var damage_recebido_amount = 6
+			damage_to_player(damage_recebido_amount)	
+		if body.is_in_group("boss"):
+			var _enemy: Enemy = body
+			var damage_recebido_amount = 10
 			damage_to_player(damage_recebido_amount)
 
 func damage_to_player(amount: int) -> void:
@@ -224,6 +236,9 @@ func damage_to_player(amount: int) -> void:
 	tween.set_trans(Tween.TRANS_QUINT)
 	tween.tween_property(self, "modulate", Color.WHITE, 0.3)
 	
+	var hurt = $Audio_Hurt
+	hurt.playing = true
+	
 	if health <= 0:
 		die()
 
@@ -235,6 +250,9 @@ func die() -> void:
 		death_object.position = position
 		get_parent().add_child(death_object)
 	
+	var death = $Audio_Death
+	death.playing = true
+	await get_tree().create_timer(0.8).timeout
 	print("Player morreu")
 	queue_free()
 
