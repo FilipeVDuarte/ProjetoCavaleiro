@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ko41rcnhbjkq"]
+[gd_scene load_steps=22 format=3 uid="uid://ko41rcnhbjkq"]
 
 [ext_resource type="Texture2D" uid="uid://cnfgolfp7eyry" path="res://ui/Titulo.png" id="1_0k8py"]
 [ext_resource type="Script" path="res://menus/menu_inicial.gd" id="1_dxw3p"]
@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cqhmkfr2lysf4" path="res://ui/Brilho 1.png" id="4_4vswt"]
 [ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="5_12dyd"]
 [ext_resource type="Texture2D" uid="uid://btvlkn8f6qtx1" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="7_4xi5c"]
-[ext_resource type="Texture2D" uid="uid://ctwkaed2q20ck" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="8_klajm"]
 [ext_resource type="Texture2D" uid="uid://6ltboi1lw8vt" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="8_u5w4m"]
 [ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="9_c2f3x"]
+[ext_resource type="StyleBox" uid="uid://vb6sua87a0lv" path="res://menus/button_hover_style.tres" id="9_f5ie4"]
 [ext_resource type="PackedScene" uid="uid://d00ll8g8ppqim" path="res://scene_transition.tscn" id="11_nmwlw"]
 
 [sub_resource type="Animation" id="Animation_y5dci"]
@@ -147,14 +147,6 @@ texture = ExtResource("4_4vswt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nch6"]
 texture = ExtResource("7_4xi5c")
-texture_margin_left = 23.0
-texture_margin_top = 15.0
-texture_margin_right = 23.0
-texture_margin_bottom = 15.0
-region_rect = Rect2(6, 0, 179, 56)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gto8f"]
-texture = ExtResource("8_klajm")
 texture_margin_left = 23.0
 texture_margin_top = 15.0
 texture_margin_right = 23.0
@@ -311,42 +303,51 @@ grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../SairButton")
+focus_neighbor_bottom = NodePath("../ComoJogarButton")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/hover = ExtResource("9_f5ie4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+theme_override_styles/focus = ExtResource("9_f5ie4")
 text = "Iniciar"
 icon_alignment = 1
 
 [node name="ComoJogarButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../SairButton")
 mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/hover = ExtResource("9_f5ie4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+theme_override_styles/focus = ExtResource("9_f5ie4")
 text = "Como Jogar"
 icon_alignment = 1
 
 [node name="SairButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../ComoJogarButton")
+focus_neighbor_bottom = NodePath("../StartButton")
 mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("5_12dyd")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxTexture_2nch6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gto8f")
+theme_override_styles/hover = ExtResource("9_f5ie4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aycgj")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_v3nqp")
+theme_override_styles/focus = ExtResource("9_f5ie4")
 text = "Sair"
 icon_alignment = 1
 

@@ -9,7 +9,8 @@ func _ready():
 		animation_player.play("default")
 	else:
 		animation_player.play("default")
-		
+	
+	$CanvasLayer/VBoxContainer/StartButton.grab_focus()
 
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")

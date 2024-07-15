@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bvxb4onqmw18b"]
+[gd_scene load_steps=31 format=3 uid="uid://bvxb4onqmw18b"]
 
 [ext_resource type="Script" path="res://menus/comojogar.gd" id="1_7o1uv"]
 [ext_resource type="Texture2D" uid="uid://btvlkn8f6qtx1" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="3_46ckh"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://box1j7tx5ctj5" path="res://fontes/Oferta-do-Dia.ttf" id="6_bajqt"]
 [ext_resource type="Texture2D" uid="uid://bb3w7gpme5nsc" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_3Slides.png" id="6_lrw3v"]
 [ext_resource type="Texture2D" uid="uid://ccacx6pnvperh" path="res://ui/botoes/JOY_ALL.png" id="7_fasfu"]
+[ext_resource type="StyleBox" uid="uid://vb6sua87a0lv" path="res://menus/button_hover_style.tres" id="7_v8nv3"]
 [ext_resource type="Texture2D" uid="uid://b5owh4xj5tvwk" path="res://ui/botoes/bt_A(Xbox).png" id="8_jlr0p"]
 [ext_resource type="Texture2D" uid="uid://ccbedb1b5ftpf" path="res://ui/botoes/bt_X(PS).png" id="9_r24pr"]
 [ext_resource type="Texture2D" uid="uid://tdi3c0n62s7h" path="res://ui/botoes/tc_W.png" id="10_a4qu8"]
@@ -151,6 +152,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rfgdu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8xd6h")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_18tq7")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_fl26q")
+theme_override_styles/focus = ExtResource("7_v8nv3")
 text = "Voltar"
 icon_alignment = 1
 
