@@ -30,7 +30,6 @@ func _ready():
 		print("Nessa fase tem um total de ", total_quest, " Objetivos")
 	else:
 		total_quest = 0
-		print("Nenhuma cena de Level encontrada ou a cena não possui objetivos!")
 
 func _process(delta: float) -> void:
 	if is_level_running:

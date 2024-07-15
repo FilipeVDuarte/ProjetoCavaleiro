@@ -394,16 +394,14 @@ position = Vector2(-360, 2019)
 [node name="Arvore80" parent="Arvores" instance=ExtResource("13_7lfpl")]
 position = Vector2(-163, 2055)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(615, 331)
-scale = Vector2(2, 2)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("16_qy0dx")]
-
 [node name="DragaoLatao" parent="." instance=ExtResource("3_5scds")]
 unique_name_in_owner = true
 position = Vector2(1087, 356)
 
 [node name="scene_transition" parent="." instance=ExtResource("9_b4bip")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(615, 331)
+scale = Vector2(2, 2)
+
+[node name="Pause_Menu" parent="Camera2D" instance=ExtResource("16_qy0dx")]

@@ -10,10 +10,8 @@ extends CanvasLayer
 
 @onready var panel_quest: Panel = $ReferenceRect/Panel_Quest
 
-
 func _process(_delta: float):
-	
-	#Update Labels
+	# Update Labels
 	time_label.text = GameManager.time_elapsed_string
 	vida_label.text = str(GameManager.vida_counter)
 	moeda_label.text = str(GameManager.coin_counter)
@@ -23,8 +21,5 @@ func _process(_delta: float):
 	
 	var total_enemies_str:int = 30
 	
-	#Condicional para quest
-	panel_quest.visible = false
-	if enemy_counter_label.text >= str(total_enemies_str):
-		panel_quest.visible = true
-	
+	# Condicional para quest
+	panel_quest.visible = GameManager.enemy_defeated_counter >= total_enemies_str

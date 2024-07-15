@@ -13,7 +13,7 @@ extends Node2D
 func _ready():
 	SceneTransitionAnimation.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransitionAnimation.play("fade_out")
-	GameManager.game_over.connect(trigger_game_over)
+	GameManager.game_over.connect(trigger_game_over())
 	GameManager.start_timer() # Inicia a contagem do tempo
 	GameManager.total_quest = total_quest_amount  # Atualiza o total de quests no GameManager
 	

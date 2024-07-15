@@ -419,6 +419,8 @@ position = Vector2(-360, 2019)
 position = Vector2(-163, 2055)
 
 [node name="Quests" type="Node2D" parent="."]
+unique_name_in_owner = true
+visible = false
 
 [node name="Quest" parent="Quests" instance=ExtResource("21_bfked")]
 position = Vector2(1977, 1052)
@@ -435,12 +437,10 @@ position = Vector2(-930, -727)
 
 [node name="Indicador UI" parent="Quests/Quest3" instance=ExtResource("15_yovit")]
 
+[node name="scene_transition" parent="." instance=ExtResource("17_yf7s4")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(615, 331)
 scale = Vector2(2, 2)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="Pause_Menu" parent="Camera2D/CanvasLayer" instance=ExtResource("22_hptnx")]
-
-[node name="scene_transition" parent="." instance=ExtResource("17_yf7s4")]
+[node name="Pause_Menu" parent="Camera2D" instance=ExtResource("22_hptnx")]
