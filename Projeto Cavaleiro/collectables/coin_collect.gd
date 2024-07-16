@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	$Area2D.body_entered.connect(on_body_entered)
+	$Audio_Real_Spawn.play()
 
 
 func on_body_entered(body: Node2D) -> void:

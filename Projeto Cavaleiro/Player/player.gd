@@ -189,6 +189,7 @@ func deal_damage_to_enemies() -> void:
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			if dot_product >= 0.3:
 				enemy.damage(damage)
+				$Audio_Dano.play()
 
 func update_hitbox_detection(delta: float) -> void:
 	#Temporizador
@@ -259,12 +260,15 @@ func heal(amount: int) -> int:
 	if health > max_health:
 		health = max_health
 	print("Player recebeu cura de ", amount, ". A vida total é de ", health, "/", max_health)
+	$Audio_VidaRegen.play()
 	return health
 
 func coin_collect(coin_amount:int) -> void:
 	item_cc += coin_amount
+	$Audio_ColetaMoeda.play()
 	print("jogador achou ", coin_amount, " total de ", item_cc)
 
 func quest_collect(quest_amount: int) -> void:
 	item_qc += quest_amount
 	quest_collected.emit(quest_amount)
+	$Audio_ColetaMoeda.play()
