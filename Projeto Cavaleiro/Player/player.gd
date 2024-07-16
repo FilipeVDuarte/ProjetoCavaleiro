@@ -177,9 +177,8 @@ func attack() -> void:
 func deal_damage_to_enemies() -> void:
 	var bodies = attack_area.get_overlapping_bodies()
 	for body in bodies:
-		if body.is_in_group("enemies"):
+		if body.is_in_group("enemies") or body.is_in_group("enemies_n1") or body.is_in_group("enemies_n2") or body.is_in_group("enemies_n3"):
 			var enemy: Enemy = body
-			
 			var direction_to_enemy = (enemy.position - position).normalized()
 			var attack_direction: Vector2
 			if sprite.flip_h:
@@ -189,8 +188,7 @@ func deal_damage_to_enemies() -> void:
 				
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			if dot_product >= 0.3:
-				enemy.damage(damage) 
-			#print("Dot: ", dot_product)
+				enemy.damage(damage)
 
 func update_hitbox_detection(delta: float) -> void:
 	#Temporizador

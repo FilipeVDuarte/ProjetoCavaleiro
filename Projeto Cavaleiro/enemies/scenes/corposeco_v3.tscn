@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dpkamruysihbf" path="res://collectables/special_pumpkin.tscn" id="6_cr1bp"]
 [ext_resource type="PackedScene" uid="uid://dfvnb2rgv81na" path="res://collectables/real.tscn" id="7_6e3mm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ak"]
-size = Vector2(26, 35)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s3ntt"]
+radius = 18.0
+height = 56.0
 
 [node name="CorpoSeco" type="CharacterBody2D" groups=["enemies_n3"]]
 motion_mode = 1
@@ -27,9 +28,8 @@ position = Vector2(0, -32)
 texture = ExtResource("3_x7ska")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-2, -17.5)
-shape = SubResource("RectangleShape2D_n66ak")
+position = Vector2(-5, -31)
+shape = SubResource("CapsuleShape2D_s3ntt")
 
 [node name="FollowPlayer" type="Node" parent="."]
 script = ExtResource("4_hrokd")
